@@ -30,6 +30,7 @@ header {
 }
 
 header .container {
+  position: relative;
   max-width: 90rem;
   margin: 0 auto;
 }
@@ -51,4 +52,19 @@ header a {
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.header__dates {
+  font-size: 1.74rem;
+  font-weight: 600;
+  background-color: hsl(0, 79%, 57%);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -9.5rem;
+  right: 2rem;
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
