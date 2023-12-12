@@ -1,0 +1,54 @@
+/*
+===================================
+STANDARD VALUES
+===================================
+*/
+
+body {
+  font-family: sans-serif;
+  background-color: hsl(31, 49%, 81%);
+}
+
+/*
+===================================
+UTILITY CLASSES
+===================================
+*/
+
+.container {
+}
+
+/*
+===================================
+HEADER
+===================================
+*/
+
+header {
+  background-color: black;
+  padding: 2rem 0;
+}
+
+header .container {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0;
+}
+
+header a {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
