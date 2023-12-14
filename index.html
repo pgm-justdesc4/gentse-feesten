@@ -20,21 +20,21 @@
                             <img src="static/img/Gentse Feesten Logos/GF-logo-2023-1-G.svg" alt="Gente Feesten logo">
                         </a>
                     </li>
-                    <li>
+                    <li class="hover-after">
                         <a href="news.html">Nieuws</a>
                     </li>
-                    <li>
+                    <li class="hover-after">
                         <a href="events/day.html">Programma</a>
                     </li>
-                    <li>
+                    <li class="hover-after">
                         <a href="#">Praktisch</a>
                     </li>
-                    <li>
+                    <li class="hover-after">
                         <a href="#">Live parkeerinfo</a>
                     </li>
                 </ul>
                 <ul>
-                    <li>
+                    <li class="hover-after">
                         <a href="#">Hoe naar gf23?</a>
                     </li>
                     <li class="header__languages">
@@ -63,7 +63,7 @@
                     </li>
                 </ul>
             </nav>
-            <div class="header__dates">
+            <div class="dates-circle">
                 <p>
                     14 - 23 juli
                 </p>
@@ -73,10 +73,12 @@
     <main>
         <section class="home-days">
             <div class="container">
-                <img src="static/img/Gentse Feesten Logos/campagne-1-G.png" alt="Gentse Letter">
+                <figure>
+                    <img src="static/img/Gentse Feesten Logos/campagne-1-G.png" alt="Gentse Letter">
+                </figure>
                 <div>
                     <div class="home-days__today">
-                        <div class="arrow">
+                        <div class="arrow-right">
                             <div class="arrow-helper"></div>
                             <img src="static/img/gentse-feesten-icoontjes/chevron-right.svg" alt="Chevron right">
                         </div>
@@ -167,7 +169,105 @@
         </section>
     </main>
     <footer>
-
+        <section class="footer-newsletter">
+            <div class="container">
+                <nav class="footer-newsletter__nav">
+                    <ul>
+                        <li class="footer-newsletter__nav-pics">
+                            <a href="#">
+                                <p>
+                                    Spot onze foto's
+                                </p>
+                                <div class="arrow-right">
+                                    <div class="arrow-helper"></div>
+                                    <img src="static/img/gentse-feesten-icoontjes/chevron-right.svg"
+                                        alt="Chevron right">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="footer-newsletter__nav-vids">
+                            <a href="#">
+                                <div class="arrow-left">
+                                    <img src="static/img/gentse-feesten-icoontjes/chevron-left.svg" alt="Chevron left">
+                                    <div class="arrow-helper"></div>
+                                </div>
+                                <p>
+                                    Aanschouw onze video's
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer-newsletter__subscribe">
+                    <figure>
+                        <img src="static/img/Gentse Feesten Logos/campagne-1-G.png" alt="Gentse feesten G">
+                    </figure>
+                    <div class="footer-newsletter__subscribe-text">
+                        <h3>Blijf op de hoogte</h3>
+                        <p>
+                            Schrijf je in op de nieuwsbrief van de Gentse Feesten
+                        </p>
+                        <div class="footer-newsletter__input">
+                            <input type="email" id="email" name="email" placeholder="Email adres:" required>
+                            <button type="submit" class="sub-button">Inschrijven</button>
+                        </div>
+                        <p>
+                            De stad Gent zal de persoonsgegevens dat je invult met respect voor jouw <a href="#">privacy</a> behandelen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer-info">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <img src="static/img/Gentse Feesten Logos/GF-logo-2023-1-G.svg" alt="G">
+                            </a>
+                        </li>
+                        <li class="footer-info__socials">
+                            <a href="https://www.facebook.com/gentsefeesten">
+                                <img src="static/img/gentse-feesten-icoontjes/facebook.svg" alt="Facebook">
+                            </a>
+                            <a href="https://www.flickr.com/photos/stadgent">
+                                <img src="static/img/gentse-feesten-icoontjes/flickr.svg" alt="Flickr">
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCUn5Z0JK-sEbql4cVNdaH-Q">
+                                <img src="static/img/gentse-feesten-icoontjes/youtube.svg" alt="Youtube">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>
+                                #gf23
+                            </p>
+                        </li>
+                        <li class="footer-info__sponsors">
+                            <a href="https://web.archive.org/web/20230714142341/https://www.avs.be/">
+                                <img src="static/img/Gentse Feesten Logos/AVS.png" alt="AVS Logo">
+                            </a>
+                            <a href="https://web.archive.org/web/20230714142341/https://stad.gent/">
+                                <img src="static/img/Gentse Feesten Logos/gent-footer.png" alt="Gent Logo">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#">Privacy</a>
+                            <a href="#">Cookie intellingen</a>
+                        </li>
+                        <li>
+                            <p>
+                                Deze website is louter informatief en geldt niet als aanbod, mogelijke fouten op de website zijn niet de aansprakelijkheid van Stad Gent.
+                            </p>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
     </footer>
 </body>
 
