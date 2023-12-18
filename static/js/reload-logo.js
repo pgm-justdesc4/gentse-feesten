@@ -11,11 +11,11 @@
   const number = getRandomNumber();
 
   function getHTMLForLogos() {
-    return `<img src="static/img/Gentse Feesten Logos/GF-logo-2023-${number}.svg" alt="Gente Feesten logo">`;
+    return `<img src="static/img/Gentse Feesten Logos/GF-logo-2023-${number}.svg" alt="Gentse Feesten logo">`;
   }
 
   function getHTMLForLetters() {
-    return `<img src="static/img/Gentse Feesten Logos/campagne-${number}.png" alt="Gente Feesten logo">`;
+    return `<img src="static/img/Gentse Feesten Logos/campagne-${number}.png" alt="Gentse Feesten letter">`;
   }
 
   function buildUI() {

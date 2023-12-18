@@ -34,6 +34,22 @@ svg {
   width: 2rem;
 }
 
+main,
+.overlay-body {
+  overflow: hidden;
+}
+
+.dropdown-menu {
+  z-index: 30;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: hsl(0, 79%, 57%);
+  width: 100%;
+  height: 100%;
+  animation: opacity 0.5s;
+}
+
 /*
 ===================================
 UTILITY CLASSES
@@ -44,6 +60,10 @@ UTILITY CLASSES
   max-width: 80rem;
   width: 90%;
   margin: 0 auto;
+}
+
+.close {
+  display: none;
 }
 
 .dates-circle {
