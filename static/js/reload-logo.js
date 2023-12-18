@@ -4,12 +4,6 @@
   const $logoFooter = document.getElementById("logo-footer");
   const $letterFooter = document.getElementById("logo-letter-footer");
 
-  function getRandomNumber() {
-    return Math.floor(Math.random() * 6 + 1);
-  }
-
-  const number = getRandomNumber();
-
   function getHTMLForLogos() {
     return `<img src="static/img/Gentse Feesten Logos/GF-logo-2023-${number}.svg" alt="Gentse Feesten logo">`;
   }
