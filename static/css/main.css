@@ -6,7 +6,7 @@ STANDARD VALUES
 
 @font-face {
   font-family: "Fira Sans";
-  src: url("../fonts/Sans Bold.woff2") format("woff2"),
+  src: url("../fonts/Fira Sans Bold.woff2") format("woff2"),
     url("../fonts/Fira Sans Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
@@ -193,6 +193,34 @@ footer {
   align-items: center;
 }
 
+.footer-newsletter__subscribe img {
+  width: 50rem;
+}
+
+.footer-newsletter__subscribe-text h3 {
+  font-size: 3rem;
+}
+
+.footer-newsletter__input input {
+  width: 40rem;
+  color: black;
+  background: transparent;
+  padding-bottom: 1rem;
+  border: 0;
+  border-bottom: 0.2rem solid black;
+  margin: 1rem 0;
+}
+
+.footer-newsletter__input button {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: hsl(0, 79%, 57%);
+  border: 0;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
 /* Footer Info */
 
 .footer-info {
@@ -230,6 +258,12 @@ footer {
 
 .footer-info__sponsors img {
   width: 5rem;
+}
+
+.footer__hashtag {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 4rem;
 }
 
 /*

@@ -16,8 +16,8 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#">
-                            <img src="static/img/Gentse Feesten Logos/GF-logo-2023-1-G.svg" alt="Gente Feesten logo">
+                        <a id="logo" href="#">
+                            <!--JAVASCRIPT-->
                         </a>
                     </li>
                     <li class="hover-after">
@@ -73,8 +73,8 @@
     <main>
         <section class="home-days">
             <div class="container">
-                <figure>
-                    <img src="static/img/Gentse Feesten Logos/campagne-1-G.png" alt="Gentse Letter">
+                <figure id="logo-letter">
+                    <!--JAVASCRIPT-->
                 </figure>
                 <div>
                     <div class="home-days__today">
@@ -199,8 +199,8 @@
                     </ul>
                 </nav>
                 <div class="footer-newsletter__subscribe">
-                    <figure>
-                        <img src="static/img/Gentse Feesten Logos/campagne-1-G.png" alt="Gentse feesten G">
+                    <figure id="logo-letter-footer">
+                        <!--JAVASCRIPT-->
                     </figure>
                     <div class="footer-newsletter__subscribe-text">
                         <h3>Blijf op de hoogte</h3>
@@ -208,7 +208,7 @@
                             Schrijf je in op de nieuwsbrief van de Gentse Feesten
                         </p>
                         <div class="footer-newsletter__input">
-                            <input type="email" id="email" name="email" placeholder="Email adres:" required>
+                            <input type="email" id="email" name="email" placeholder="Jouw e-mailadres" required>
                             <button type="submit" class="sub-button">Inschrijven</button>
                         </div>
                         <p>
@@ -223,8 +223,8 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href="index.html">
-                                <img src="static/img/Gentse Feesten Logos/GF-logo-2023-1-G.svg" alt="G">
+                            <a id="logo-footer" href="index.html">
+                                <!--JAVASCRIPT-->
                             </a>
                         </li>
                         <li class="footer-info__socials">
@@ -241,15 +241,15 @@
                     </ul>
                     <ul>
                         <li>
-                            <p>
+                            <p class="footer__hashtag">
                                 #gf23
                             </p>
                         </li>
                         <li class="footer-info__sponsors">
-                            <a href="https://web.archive.org/web/20230714142341/https://www.avs.be/">
+                            <a href="https://www.avs.be/">
                                 <img src="static/img/Gentse Feesten Logos/AVS.png" alt="AVS Logo">
                             </a>
-                            <a href="https://web.archive.org/web/20230714142341/https://stad.gent/">
+                            <a href="https://stad.gent/">
                                 <img src="static/img/Gentse Feesten Logos/gent-footer.png" alt="Gent Logo">
                             </a>
                         </li>
@@ -269,6 +269,7 @@
             </div>
         </section>
     </footer>
+    <script src="./static/js/reload-logo.js"></script>
 </body>
 
 </html>
