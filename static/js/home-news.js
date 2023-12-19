@@ -1,27 +1,29 @@
-(function () {
-  const API_URL = "https://www.pgm.gent/data/gentsefeesten/events_500.json";
+(async function () {
+  const API_URL = "https://www.pgm.gent/data/gentsefeesten/news.json";
+  const data = await fetchData(API_URL);
+  const $titleOne = document.getElementById("title-1");
+  const $titleTwo = document.getElementById("title-2");
+  const $titleThree = document.getElementById("title-3");
 
-  async function fetchData(url, callback) {
-    try {
-      const response = await fetch(url);
-      if (response.status === 200) {
-        const data = await response.json();
-        console.log(data);
-      } else {
-        throw new Error("Error with the API.");
-      }
-    } catch (error) {
-      console.error(error.message);
-    }
+  function getRandomTitle(data) {
+    const titles = data.map((data) => data.title);
+    const title = titles[getRandomNumber(5)];
+    return title;
   }
 
-  function renderData(data) {
-    // HIER BEZIG
+  function registerListeners() {
+    // click event vr 3 nieuwsberichten
+  }
+
+  function buildUI(data) {
+    $titleOne.innerHTML = getRandomTitle(data);
+    $titleTwo.innerHTML = getRandomTitle(data);
+    $titleThree.innerHTML = getRandomTitle(data);
   }
 
   function initialize() {
-    fetchData(API_URL, renderData);
+    buildUI(data);
   }
 
-  console.log(initialize());
+  initialize();
 })();

@@ -454,6 +454,7 @@ HOME - News
 .home-news .container {
   width: 100rem;
   display: flex;
+  justify-content: center;
 }
 
 .home-news__title {
@@ -481,6 +482,7 @@ HOME - News
 
 .home-news__articles {
   display: flex;
+  width: 60rem;
 }
 
 .home-news__articles article {
@@ -513,5 +515,9 @@ HOME - News
 
 .news-grid-3 {
   grid-column: span 2;
-  width: 30rem;
+  width: 40rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
