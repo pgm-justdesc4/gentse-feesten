@@ -72,12 +72,14 @@ UTILITY CLASSES
   align-items: center;
 }
 
-div.arrow-right img {
+div.arrow-right svg {
   width: 3rem;
   margin-left: -1.75rem;
+  color: black;
 }
 
-div.arrow-left img {
+div.arrow-left svg {
+  color: black;
   width: 3rem;
   margin-right: -1.75rem;
 }
@@ -419,4 +421,96 @@ HOME - Days
 
 .home-days__grid strong {
   font-size: 2rem;
+}
+
+/*
+===================================
+HOME - News
+===================================
+*/
+
+.home-spotlight {
+  background-color: black;
+  height: 30rem; /*VERLOPIG*/
+}
+
+/*
+===================================
+HOME - News
+===================================
+*/
+
+.home-news__articles-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-news {
+  color: white;
+  background-color: black;
+}
+
+.home-news .container {
+  width: 100rem;
+  display: flex;
+}
+
+.home-news__title {
+  display: inline-block;
+  rotate: -90deg;
+  height: 0;
+}
+
+.home-news__title::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  background-color: hsl(0, 79%, 57%);
+  width: 30rem;
+  height: 10rem;
+}
+
+.home-news h2 {
+  font-size: 10rem;
+  background-color: black;
+  padding: 0.5rem;
+}
+
+.home-news__articles {
+  display: flex;
+}
+
+.home-news__articles article {
+  cursor: pointer;
+  border: 0.1rem solid white;
+}
+
+.home-news .arrow-right svg {
+  color: white;
+}
+
+.home-news .arrow-helper {
+  background-color: white;
+}
+
+.home-news__news-btn {
+  max-width: 15rem;
+  border: 0.1rem solid white;
+  padding: 1rem;
+  margin-top: 5rem;
+}
+
+/* Grid */
+
+.home-news__articles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.news-grid-3 {
+  grid-column: span 2;
+  width: 30rem;
 }
