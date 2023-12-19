@@ -425,7 +425,7 @@ HOME - Days
 
 /*
 ===================================
-HOME - News
+HOME - Spotlight
 ===================================
 */
 
@@ -448,6 +448,7 @@ HOME - News
 .home-news {
   color: white;
   background-color: black;
+  padding-bottom: 5rem;
 }
 
 .home-news .container {
@@ -461,6 +462,12 @@ HOME - News
   height: 0;
 }
 
+.home-news h2 {
+  font-size: 10rem;
+  background-color: black;
+  padding: 0.5rem;
+}
+
 .home-news__title::after {
   z-index: -1;
   content: "";
@@ -470,12 +477,6 @@ HOME - News
   background-color: hsl(0, 79%, 57%);
   width: 30rem;
   height: 10rem;
-}
-
-.home-news h2 {
-  font-size: 10rem;
-  background-color: black;
-  padding: 0.5rem;
 }
 
 .home-news__articles {
