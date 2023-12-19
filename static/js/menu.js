@@ -42,7 +42,7 @@
                 <li class="menu__program">
                     <a class="menu__program-item" href="#">
                         <p>Programma</p>
-                        <img src="static/img/gentse-feesten-icoontjes/arrow-right.svg" alt="Arrow right">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 32"><path fill="currentColor" d="m18.524 0-4.049 4.022 8.784 8.784H0v5.677h23.259l-8.784 8.784 4.049 4.022 15.609-15.645L18.524 0z"/></svg>
                     </a>
                     <div>
                         <ul>
