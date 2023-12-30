@@ -30,7 +30,7 @@
         </div>
     <div class="menu__nav">
         <nav>
-        <a href="#">
+        <a id="logo-menu" href="#">
             <img src="static/img/Gentse Feesten Logos/GF-logo-2023-${number}.svg" alt="Gentse Feesten logo">
         </a>
             <ul class="menu__nav-list">

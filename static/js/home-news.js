@@ -7,12 +7,10 @@
 
   function getRandomTitle(data) {
     const titles = data.map((data) => data.title);
-    const title = titles[getRandomNumber(5)];
+    const titlesId = data.map((data) => data.id);
+    const randomNumber = getRandomNumber(5);
+    const title = `<a href="events/detail.html?id=${titlesId[randomNumber]}">${titles[randomNumber]}</a>`;
     return title;
-  }
-
-  function registerListeners() {
-    // click event vr 3 nieuwsberichten
   }
 
   function buildUI(data) {

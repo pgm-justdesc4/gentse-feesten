@@ -1,10 +1,23 @@
-// Get random number for logos
+/*
+===================================
+Random Number
+===================================
+*/
+
 function getRandomNumber(number) {
   const randomNumber = Math.floor(Math.random() * number + 1);
   return randomNumber;
 }
 
-// Fetch data
+// Get random number for logos
+const number = getRandomNumber(6);
+
+/*
+===================================
+Fetch Data
+===================================
+*/
+
 async function fetchData(url) {
   try {
     const response = await fetch(url);
@@ -20,7 +33,12 @@ async function fetchData(url) {
   }
 }
 
-// Get params from url
+/*
+===================================
+Get Params (from url)
+===================================
+*/
+
 function getParams() {
   const currentUrl = new URL(window.location.href);
   return currentUrl.searchParams;
