@@ -431,7 +431,56 @@ HOME - Spotlight
 
 .home-spotlight {
   background-color: black;
-  height: 30rem; /*VERLOPIG*/
+  padding: 10rem 0;
+  padding-bottom: 7rem; /*VERLOPIG*/
+}
+
+.home-spotlight .container {
+  width: 100rem;
+  padding-left: 7.5rem;
+}
+
+.home-spotlight__events {
+  display: flex;
+  gap: 3.5rem;
+  color: white;
+  overflow: auto;
+  padding-bottom: 10rem;
+}
+
+.home-spotlight__events li {
+  list-style: none;
+}
+
+.home-spotlight__events a img {
+  max-width: 25rem;
+}
+
+.home-spotlight__events a {
+  position: relative;
+  text-decoration: none;
+}
+
+.spotlight-text-bl {
+  position: absolute;
+  bottom: -8rem;
+  left: 0;
+  border: 0.1rem solid white;
+  padding: 2rem;
+  background-color: black;
+}
+
+.spotlight-text-bl h2,
+.spotlight-text-bl p {
+  color: white;
+}
+
+.spotlight-text-bl h3 {
+  display: inline-block;
+  color: black;
+  background-color: hsl(0, 79%, 57%);
+  padding: 0.5rem;
+  margin: 1.5rem 0;
 }
 
 /*
@@ -443,6 +492,7 @@ HOME - News
 .home-news__articles-container {
   display: flex;
   flex-direction: column;
+  margin-right: 5rem;
 }
 
 .home-news {
@@ -452,9 +502,9 @@ HOME - News
 }
 
 .home-news .container {
-  width: 100rem;
   display: flex;
   justify-content: center;
+  padding: 10rem;
 }
 
 .home-news__title {
@@ -464,9 +514,15 @@ HOME - News
 }
 
 .home-news h2 {
-  font-size: 10rem;
+  font-size: 9rem;
   background-color: black;
   padding: 0.5rem;
+  margin-right: 18rem;
+}
+
+.home-news a {
+  text-decoration: none;
+  color: white;
 }
 
 .home-news__title::after {
@@ -474,20 +530,29 @@ HOME - News
   content: "";
   position: absolute;
   top: -2rem;
-  right: -2rem;
+  right: 15rem;
   background-color: hsl(0, 79%, 57%);
   width: 30rem;
   height: 10rem;
 }
 
+.home-news__articles a {
+  font-size: 2rem;
+}
+
 .home-news__articles {
   display: flex;
-  width: 60rem;
+  width: 65rem;
 }
 
 .home-news__articles article {
   cursor: pointer;
   border: 0.1rem solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 1rem;
 }
 
 .home-news .arrow-right svg {
@@ -498,11 +563,23 @@ HOME - News
   background-color: white;
 }
 
+.home-news figure {
+  width: 37.5rem;
+}
+
+.home-news figure img {
+  object-fit: fill;
+  object-position: center;
+  height: 100%;
+}
+
 .home-news__news-btn {
-  max-width: 15rem;
+  max-width: 17rem;
   border: 0.1rem solid white;
   padding: 1rem;
   margin-top: 5rem;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 /* Grid */
@@ -515,9 +592,5 @@ HOME - News
 
 .news-grid-3 {
   grid-column: span 2;
-  width: 40rem;
   height: 15rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
