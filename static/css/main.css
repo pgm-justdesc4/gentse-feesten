@@ -590,7 +590,7 @@ HOME - News
   grid-template-rows: repeat(2, 1fr);
 }
 
-.news-grid-3 {
+.home-news__articles-grid article:last-child {
   grid-column: span 2;
   height: 15rem;
 }

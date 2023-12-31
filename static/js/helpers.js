@@ -14,6 +14,27 @@ const number = getRandomNumber(6);
 
 /*
 ===================================
+Random Array
+===================================
+*/
+
+function getRandomArray(arrayLength, data) {
+  let array = [];
+
+  while (array.length < arrayLength) {
+    const randomNumber = getRandomNumber(data.length - 1);
+    const randomItem = data[randomNumber];
+    const inArray = array.some((item) => item.id === randomItem.id);
+
+    if (!inArray) {
+      array.push(randomItem);
+    }
+  }
+  return array;
+}
+
+/*
+===================================
 Fetch Data
 ===================================
 */

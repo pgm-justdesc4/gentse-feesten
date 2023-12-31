@@ -2,30 +2,24 @@
   const API_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
   const data = await fetchData(API_URL);
   const $spotlight = document.getElementById("spotlight");
+  const events = getRandomArrayForEvents(8, data);
 
-  function getHTMLForRandomEvents(data) {
-    let events = [];
+  function getRandomArrayForEvents(arrayLength, data) {
+    let array = [];
 
-    data.forEach((event) => {
-      const randomNumber = getRandomNumber(data.length);
-      const randomEvent = data[randomNumber];
+    while (array.length < arrayLength) {
+      const randomNumber = getRandomNumber(data.length - 1);
+      const randomItem = data[randomNumber];
+      const inArray = array.some((item) => item.id === randomItem.id);
 
-      let inArray = false;
-
-      if (events.length >= 8) {
-        return;
+      if (!inArray && randomItem.image) {
+        array.push(randomItem);
       }
-      for (let i = 0; i < events.length; i++) {
-        if (events[i].id === event.id) {
-          inArray = true;
-        }
-      }
+    }
+    return array;
+  }
 
-      if (!inArray && randomEvent.image) {
-        events.push(randomEvent);
-      }
-    });
-
+  function getHTMLForEvents(events) {
     let html = "";
 
     events.forEach((event) => {
@@ -37,7 +31,7 @@
             <h2>${event.title}</h2>
             <h3>${event.location}</h3>
             <p>
-              ${event.start}
+              ${event.start} u.
             </p>
           </div>
         </a>
@@ -46,12 +40,12 @@
     return html;
   }
 
-  function buildUI(data) {
-    $spotlight.innerHTML = getHTMLForRandomEvents(data);
+  function buildUI() {
+    $spotlight.innerHTML = getHTMLForEvents(events);
   }
 
   function initialize() {
-    buildUI(data);
+    buildUI();
   }
 
   initialize();
