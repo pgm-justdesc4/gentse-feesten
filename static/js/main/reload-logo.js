@@ -14,7 +14,9 @@
 
   function buildUI() {
     $logo.innerHTML = getHTMLForLogos();
-    $letter.innerHTML = getHTMLForLetters();
+    if ($letter) {
+      $letter.innerHTML = getHTMLForLetters();
+    }
     $logoFooter.innerHTML = getHTMLForLogos();
     $letterFooter.innerHTML = getHTMLForLetters();
   }

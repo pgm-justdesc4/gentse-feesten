@@ -10,7 +10,7 @@
     news.forEach((newsPost) => {
       html += `
       <article>
-        <a href="events/detail.html?id:${newsPost.id}">
+        <a href="events/detail.html?id=${newsPost.id}">
             <p>${newsPost.title}</p>
             <div class="arrow-right">
                 <div class="arrow-helper"></div>

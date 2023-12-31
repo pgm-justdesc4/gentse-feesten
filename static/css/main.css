@@ -594,3 +594,48 @@ HOME - News
   grid-column: span 2;
   height: 15rem;
 }
+
+/*
+===================================
+NEWS
+===================================
+*/
+
+.news {
+  color: white;
+  background-color: black;
+}
+
+.news li {
+  margin-bottom: 5rem;
+  border: 0.1rem solid white;
+}
+
+.news a {
+  display: flex;
+  text-decoration: none;
+  color: white;
+}
+
+.news .arrow-helper {
+  background-color: white;
+}
+
+.news .arrow-right svg {
+  color: white;
+}
+
+.news .page-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.news .page-nav li {
+  display: inline-block;
+  border: 0.1rem solid white;
+  border-radius: 25%;
+  list-style: none;
+  font-size: 2rem;
+  padding: 1rem;
+}

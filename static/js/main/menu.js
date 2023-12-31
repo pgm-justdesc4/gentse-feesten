@@ -30,12 +30,12 @@
         </div>
     <div class="menu__nav">
         <nav>
-        <a id="logo-menu" href="#">
+        <a id="logo-menu" href="index.html">
             <img src="static/img/Gentse Feesten Logos/GF-logo-2023-${number}.svg" alt="Gentse Feesten logo">
         </a>
             <ul class="menu__nav-list">
                 <li>
-                    <a href="#">
+                    <a href="news.html">
                         Nieuws
                     </a>
                 </li>
