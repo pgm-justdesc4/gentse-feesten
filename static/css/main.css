@@ -537,7 +537,8 @@ HOME - News
 }
 
 .home-news__articles a {
-  font-size: 2rem;
+  font-size: 1.75rem;
+  font-weight: 700;
 }
 
 .home-news__articles {
@@ -546,7 +547,6 @@ HOME - News
 }
 
 .home-news__articles article {
-  cursor: pointer;
   border: 0.1rem solid white;
   display: flex;
   flex-direction: column;
