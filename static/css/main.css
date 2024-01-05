@@ -639,3 +639,68 @@ NEWS
   font-size: 2rem;
   padding: 1rem;
 }
+
+/*
+===================================
+SEARCH
+===================================
+*/
+
+.search {
+  color: white;
+  background-color: black;
+  padding-bottom: 5rem;
+}
+
+.search img {
+  width: 20rem;
+}
+
+.search h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+}
+
+.search-form input {
+  width: 50rem;
+  padding: 1rem;
+  border-top: 0.1rem solid white;
+  border-right: 0;
+  border-bottom: 0.1rem solid white;
+  border-left: 0.1rem solid white;
+  color: white;
+  background-color: black;
+}
+
+.search-form input:focus {
+  outline: 0;
+}
+
+.search-form button {
+  cursor: pointer;
+  background-color: transparent;
+  border-top: 0.1rem solid white;
+  border-right: 0.1rem solid white;
+  border-bottom: 0.1rem solid white;
+  border-left: 0;
+  padding: 0.5rem;
+}
+
+.search-form button:hover {
+  background-color: hsl(0, 79%, 57%);
+}
+
+.search-form button:hover svg {
+  color: black;
+}
+
+.searched-events {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}

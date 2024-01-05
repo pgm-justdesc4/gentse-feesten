@@ -46,7 +46,7 @@ async function fetchData(url) {
       const data = await response.json();
       return data;
     } else {
-      throw new Error("Error with the API.");
+      throw new Error("Error with the API.", error.message);
     }
   } catch (error) {
     console.error(error.message);
