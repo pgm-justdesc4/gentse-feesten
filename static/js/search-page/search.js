@@ -1,6 +1,6 @@
 (async function () {
   const API_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
-  const data = await fetchData(API_URL);
+  const $data = await fetchData(API_URL);
   const $searchForm = document.getElementById("searchForm");
   const $events = document.getElementById("searchedEvents");
 
@@ -55,7 +55,7 @@
   function registerListeners() {
     $searchForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      searchEvents(data, buildUI);
+      searchEvents($data, buildUI);
     });
   }
 

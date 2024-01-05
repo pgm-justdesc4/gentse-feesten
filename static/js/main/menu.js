@@ -1,7 +1,7 @@
 (function () {
   function registerListeners() {
-    const $click = document.getElementById("menu-btn");
-    $click.addEventListener("click", function (e) {
+    const $menuBtn = document.getElementById("menu-btn");
+    $menuBtn.addEventListener("click", function (e) {
       e.preventDefault();
       const $menu = document.getElementById("menu");
       $menu.classList.remove("close");

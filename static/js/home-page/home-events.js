@@ -1,8 +1,8 @@
 (async function () {
   const API_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
-  const data = await fetchData(API_URL);
+  const $data = await fetchData(API_URL);
   const $spotlight = document.getElementById("spotlight");
-  const events = getRandomArrayForEvents(8, data);
+  const $events = getRandomArrayForEvents(8, $data);
 
   function getRandomArrayForEvents(arrayLength, data) {
     let array = [];
@@ -41,7 +41,7 @@
   }
 
   function buildUI() {
-    $spotlight.innerHTML = getHTMLForEvents(events);
+    $spotlight.innerHTML = getHTMLForEvents($events);
   }
 
   function initialize() {

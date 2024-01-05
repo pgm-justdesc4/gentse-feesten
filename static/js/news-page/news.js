@@ -1,6 +1,6 @@
 (async function () {
   const API_URL = "https://www.pgm.gent/data/gentsefeesten/news.json";
-  const data = await fetchData(API_URL);
+  const $data = await fetchData(API_URL);
   const $news = document.getElementById("news");
 
   function getHTMLForNews(news) {
@@ -27,7 +27,7 @@
   }
 
   function buildUI() {
-    $news.innerHTML = getHTMLForNews(data);
+    $news.innerHTML = getHTMLForNews($data);
   }
 
   function initialize() {
