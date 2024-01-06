@@ -3,6 +3,8 @@
   const $data = await fetchData(API_URL);
   const $news = document.getElementById("news");
 
+  // RENDER HTML
+
   function getHTMLForNews(news) {
     let html = "";
 
@@ -26,9 +28,13 @@
     return html;
   }
 
+  // BUILD UI
+
   function buildUI() {
     $news.innerHTML = getHTMLForNews($data);
   }
+
+  // INITIALIZE
 
   function initialize() {
     buildUI();

@@ -4,6 +4,8 @@
   const $spotlight = document.getElementById("spotlight");
   const $events = getRandomArrayForEvents(8, $data);
 
+  // MAKE RANDOM ARRAY FOR EVENTS
+
   function getRandomArrayForEvents(arrayLength, data) {
     let array = [];
 
@@ -18,6 +20,8 @@
     }
     return array;
   }
+
+  // RENDER HTML
 
   function getHTMLForEvents(events) {
     let html = "";
@@ -40,9 +44,13 @@
     return html;
   }
 
+  // BUILD UI
+
   function buildUI() {
     $spotlight.innerHTML = getHTMLForEvents($events);
   }
+
+  // INITIALIZE
 
   function initialize() {
     buildUI();

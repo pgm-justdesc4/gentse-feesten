@@ -4,13 +4,15 @@
   const $newsList = document.getElementById("news");
   const $news = getRandomArray(3, $data);
 
+  // RENDER HTML
+
   function getHTMLForNews(news) {
     let html = "";
 
     news.forEach((newsPost) => {
       html += `
       <article>
-        <a href="events/detail.html?id=${newsPost.id}">
+        <a href="news.html">
             <p>${newsPost.title}</p>
             <div class="arrow-right">
                 <div class="arrow-helper"></div>
@@ -24,9 +26,13 @@
     return html;
   }
 
+  // BUILD UI
+
   function buildUI() {
     $newsList.innerHTML = getHTMLForNews($news);
   }
+
+  // INITIALIZE
 
   function initialize() {
     buildUI();

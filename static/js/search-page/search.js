@@ -6,6 +6,8 @@
   const $events = document.getElementById("searchedEvents");
   const $searchQuery = getParam("search");
 
+  // RENDER HTML
+
   function getHTMLForSearchInfo(data, searchQuery) {
     return `<p>
     <strong>${data.length} resultaten</strong> voor "${searchQuery}"
@@ -35,10 +37,14 @@
     return html;
   }
 
+  // BUILD UI
+
   function buildUI(events) {
     $searchInfo.innerHTML = getHTMLForSearchInfo(events, $searchQuery);
     $events.innerHTML = getHTMLForSearchedEvents(events);
   }
+
+  // SEARCH
 
   function searchEvents(data, buildUI) {
     const query = $searchQuery.split(" ");
@@ -69,6 +75,8 @@
       searchEvents($data, buildUI);
     });
   }
+
+  // INITIALIZE
 
   function initialize() {
     searchEvents($data, buildUI);

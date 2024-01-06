@@ -1,13 +1,12 @@
 (function () {
-  function registerListeners() {
-    const $menuBtn = document.getElementById("menu-btn");
-    $menuBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      const $menu = document.getElementById("menu");
-      $menu.classList.remove("close");
-      let html = "";
-      html += `
-      <div class="menu">
+  const $menu = document.getElementById("menu");
+  const $menuBtn = document.getElementById("menu-btn");
+
+  // RENDER HTML
+
+  function getHTMLForMenu() {
+    return `
+        <div class="menu">
         <div class="menu__search">
             <ul>
                 <li class="header__languages">
@@ -129,8 +128,21 @@
         X
     </a>
 </div>`;
+  }
 
-      $menu.innerHTML = html;
+  // BUILD UI
+
+  function buildUI() {
+    $menu.innerHTML = getHTMLForMenu();
+  }
+
+  // REGISTER LISTENERS
+
+  function registerListeners() {
+    $menuBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      $menu.classList.remove("close");
+      buildUI();
 
       const $close = document.getElementById("close");
       $close.addEventListener("click", function (e) {
@@ -139,6 +151,8 @@
       });
     });
   }
+
+  // INITIALIZE
 
   function initialize() {
     registerListeners();

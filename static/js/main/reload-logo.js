@@ -4,6 +4,8 @@
   const $logoFooter = document.getElementById("logo-footer");
   const $letterFooter = document.getElementById("logo-letter-footer");
 
+  // RENDER HTML
+
   function getHTMLForLogos() {
     return `<img src="static/img/Gentse Feesten Logos/GF-logo-2023-${number}.svg" alt="Gentse Feesten logo">`;
   }
@@ -11,6 +13,8 @@
   function getHTMLForLetters() {
     return `<img src="static/img/Gentse Feesten Logos/campagne-${number}.png" alt="Gentse Feesten letter">`;
   }
+
+  // BUILD UI
 
   function buildUI() {
     $logo.innerHTML = getHTMLForLogos();
@@ -20,6 +24,8 @@
     $logoFooter.innerHTML = getHTMLForLogos();
     $letterFooter.innerHTML = getHTMLForLetters();
   }
+
+  // INITIALIZE
 
   function initialize() {
     buildUI();
