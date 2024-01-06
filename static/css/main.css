@@ -297,10 +297,14 @@ footer {
   width: 40rem;
   color: black;
   background: transparent;
-  padding-bottom: 1rem;
+  padding: 1rem 0.5rem;
   border: 0;
   border-bottom: 0.2rem solid black;
   margin: 1rem 0;
+}
+
+.footer-newsletter__input input:focus {
+  outline: 0.15rem solid black;
 }
 
 .footer-newsletter__input button {

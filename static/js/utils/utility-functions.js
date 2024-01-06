@@ -9,6 +9,9 @@ function getRandomNumber(number) {
   return randomNumber;
 }
 
+// Get number for logos
+const $number = getRandomNumber(6);
+
 /*
 ===================================
 Random Array
@@ -28,6 +31,22 @@ function getRandomArray(arrayLength, data) {
     }
   }
   return array;
+}
+
+/*
+===================================
+Path for files in Events folder
+===================================
+*/
+
+function getPath(file) {
+  const url = window.location.href;
+
+  if (url.includes(file)) {
+    return "../";
+  } else {
+    return "";
+  }
 }
 
 /*

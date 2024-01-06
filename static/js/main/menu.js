@@ -1,8 +1,7 @@
 (function () {
   const $menu = document.getElementById("menu");
   const $menuBtn = document.getElementById("menu-btn");
-  const $logo = getHTMLForLogos($url, $number);
-  const $logoLetter = getHTMLForLetters($url, $number);
+  const $filePath = getPath("day.html");
 
   // RENDER HTML
 
@@ -31,74 +30,74 @@
         </div>
     <div class="menu__nav">
         <nav>
-        <a id="logo-menu" href="index.html">
-            ${$logo}
+        <a id="logo-menu" href="${$filePath}index.html">
+            <img src="${$filePath}static/img/Gentse Feesten Logos/GF-logo-2023-${$number}.svg" alt="Gentse Feesten logo">
         </a>
             <ul class="menu__nav-list">
                 <li>
-                    <a href="news.html">
+                    <a href="${$filePath}news.html">
                         Nieuws
                     </a>
                 </li>
                 <li class="menu__program">
-                    <a class="menu__program-item" href="#">
+                    <a class="menu__program-item" href="${$filePath}events/day.html?day=14">
                         <p>Programma</p>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 32"><path fill="currentColor" d="m18.524 0-4.049 4.022 8.784 8.784H0v5.677h23.259l-8.784 8.784 4.049 4.022 15.609-15.645L18.524 0z"/></svg>
                     </a>
                     <div>
                         <ul>
                             <li>
-                                <a href="#">
+                                <a href="${$filePath}events/day.html?day=14">
                                     Vrijdag 14 juli
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="${$filePath}events/day.html?day=15">
                                     Zaterdag 15 juli
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="${$filePath}events/day.html?day=16">
                                     Zondag 16 juli
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="${$filePath}events/day.html?day=17">
                                     Maandag 17 juli
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="${$filePath}events/day.html?day=18">
                                     Dinsdag 18 juli
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="${$filePath}events/day.html?day=19">
                                     Woensdag 19 juli
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="${$filePath}events/day.html?day=20">
                                     Donderdag 20 juli
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="${$filePath}events/day.html?day=21">
                                     Vrijdag 21 juli
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="${$filePath}events/day.html?day=22">
                                     Zaterdag 22 juli
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="${$filePath}events/day.html?day=23">
                                     Zondag 23 juli
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="${$filePath}events/day.html?day=14">
                                     Programma
                                 </a>
                             </li>
@@ -124,7 +123,7 @@
         </nav>
     </div>
     <figure id="logoLetterMenu" class="menu__letter">
-        ${$logoLetter}
+        <img src="${$filePath}static/img/Gentse Feesten Logos/campagne-${$number}.png" alt="Gentse Feesten letter">
     </figure>
     <a class="menu__close" id="close" href="#">
         X
