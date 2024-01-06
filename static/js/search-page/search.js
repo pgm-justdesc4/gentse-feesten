@@ -2,7 +2,15 @@
   const API_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
   const $data = await fetchData(API_URL);
   const $searchForm = document.getElementById("searchForm");
+  const $searchInfo = document.getElementById("searchInfo");
   const $events = document.getElementById("searchedEvents");
+  const $searchQuery = getParam("search");
+
+  function getHTMLForSearchInfo(data, searchQuery) {
+    return `<p>
+    <strong>${data.length} resultaten</strong> voor "${searchQuery}"
+    </p>`;
+  }
 
   function getHTMLForSearchedEvents(events) {
     let html = "";
@@ -27,24 +35,28 @@
     return html;
   }
 
-  function buildUI(data) {
-    $events.innerHTML = getHTMLForSearchedEvents(data);
+  function buildUI(events) {
+    $searchInfo.innerHTML = getHTMLForSearchInfo(events, $searchQuery);
+    $events.innerHTML = getHTMLForSearchedEvents(events);
   }
 
   function searchEvents(data, buildUI) {
-    const searchQuery = $searchForm.querySelector("input").value;
-    const query = searchQuery.split(" ");
+    const query = $searchQuery.split(" ");
 
     const filteredEvents = data.filter((event) => {
       return query.every((word) => {
         if (event.title && event.description) {
-          return event.title.includes(word) || event.description.includes(word);
+          return (
+            event.title.includes(word) ||
+            event.description.includes(word) ||
+            event.slug.includes(word)
+          );
         }
       });
     });
     console.log(filteredEvents);
     const url = new URL(window.location.href);
-    url.searchParams.set("search", searchQuery);
+    url.searchParams.set("search", $searchQuery);
     window.history.pushState({}, "", url);
 
     buildUI(filteredEvents);
@@ -53,13 +65,13 @@
   // REGISTER LISTENERS
 
   function registerListeners() {
-    $searchForm.addEventListener("submit", (e) => {
-      e.preventDefault();
+    $searchForm.addEventListener("submit", () => {
       searchEvents($data, buildUI);
     });
   }
 
   function initialize() {
+    searchEvents($data, buildUI);
     registerListeners();
   }
 

@@ -25,7 +25,7 @@
     events.forEach((event) => {
       html += `
       <li>
-        <a href="events/detail.html?id=${event.id}">
+        <a href="events/detail.html?day=${event.day}&slug=${event.slug}">
           <img src="${event.image.full}" alt="Afbeelding event">
           <div class="spotlight-text-bl">
             <h2>${event.title}</h2>
