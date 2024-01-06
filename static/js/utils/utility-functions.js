@@ -9,9 +9,6 @@ function getRandomNumber(number) {
   return randomNumber;
 }
 
-// Get random number for logos
-const number = getRandomNumber(6);
-
 /*
 ===================================
 Random Array

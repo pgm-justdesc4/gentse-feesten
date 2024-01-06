@@ -1,6 +1,8 @@
 (function () {
   const $menu = document.getElementById("menu");
   const $menuBtn = document.getElementById("menu-btn");
+  const $logo = getHTMLForLogos($url, $number);
+  const $logoLetter = getHTMLForLetters($url, $number);
 
   // RENDER HTML
 
@@ -30,7 +32,7 @@
     <div class="menu__nav">
         <nav>
         <a id="logo-menu" href="index.html">
-            <img src="static/img/Gentse Feesten Logos/GF-logo-2023-${number}.svg" alt="Gentse Feesten logo">
+            ${$logo}
         </a>
             <ul class="menu__nav-list">
                 <li>
@@ -121,8 +123,8 @@
             </ul>
         </nav>
     </div>
-    <figure class="menu__letter">
-        <img src="static/img/Gentse Feesten Logos/campagne-${number}.png" alt="Gentse Feesten letter">
+    <figure id="logoLetterMenu" class="menu__letter">
+        ${$logoLetter}
     </figure>
     <a class="menu__close" id="close" href="#">
         X
