@@ -60,10 +60,6 @@
         }
       });
     });
-    console.log(filteredEvents);
-    const url = new URL(window.location.href);
-    url.searchParams.set("search", $searchQuery);
-    window.history.pushState({}, "", url);
 
     buildUI(filteredEvents);
   }

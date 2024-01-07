@@ -87,6 +87,18 @@ function getParam(name) {
 
 /*
 ===================================
+Set url search params
+===================================
+*/
+
+function setSearchParams(searchInput, searchUrl) {
+  let url = searchUrl;
+  url += `search=${searchInput}`;
+  return (window.location.href = url);
+}
+
+/*
+===================================
 Get HTML for events
 ===================================
 */
