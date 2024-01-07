@@ -35,7 +35,7 @@ function getRandomArray(arrayLength, data) {
 
 /*
 ===================================
-Path for files in Events folder
+Get path for folder return
 ===================================
 */
 
@@ -83,4 +83,31 @@ function getParams() {
 function getParam(name) {
   const params = getParams();
   return params.get(name);
+}
+
+/*
+===================================
+Get HTML for events
+===================================
+*/
+
+function getHTMLForEvents(events) {
+  let html = "";
+
+  events.forEach((event) => {
+    html += `
+    <li>
+      <a href="events/detail.html?day=${event.day}&slug=${event.slug}">
+        <img src="${event.image.full}" alt="Afbeelding event">
+        <div class="spotlight-text-bl">
+          <h2>${event.title}</h2>
+          <h3>${event.location}</h3>
+          <p>
+            ${event.start} u.
+          </p>
+        </div>
+      </a>
+    </li>`;
+  });
+  return html;
 }

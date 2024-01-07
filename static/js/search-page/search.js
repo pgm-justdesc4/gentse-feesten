@@ -47,15 +47,15 @@
   // SEARCH
 
   function searchEvents(data, buildUI) {
-    const query = $searchQuery.split(" ");
+    const query = $searchQuery.toLowerCase().split(" ");
 
     const filteredEvents = data.filter((event) => {
       return query.every((word) => {
-        if (event.title && event.description) {
+        if (event.description) {
           return (
-            event.title.includes(word) ||
-            event.description.includes(word) ||
-            event.slug.includes(word)
+            event.title.toLowerCase().includes(word) ||
+            event.description.toLowerCase().includes(word) ||
+            event.slug.toLowerCase().includes(word)
           );
         }
       });
