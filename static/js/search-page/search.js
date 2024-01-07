@@ -1,9 +1,15 @@
 (async function () {
   const API_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
   const $data = await fetchData(API_URL);
+
   const $searchForm = document.getElementById("searchForm");
   const $searchInfo = document.getElementById("searchInfo");
   const $events = document.getElementById("searchedEvents");
+
+  const $eventsFiltered = $data.filter(
+    (event) => event.image && event.location && event.description
+  );
+
   const $searchQuery = getParam("search");
 
   // RENDER HTML
@@ -14,42 +20,19 @@
     </p>`;
   }
 
-  function getHTMLForSearchedEvents(events) {
-    let html = "";
-
-    events.forEach((event) => {
-      if (event.image && event.image.full) {
-        html += `
-          <li>
-            <a href="events/detail.html?id=${event.id}">
-              <img src="${event.image.full}" alt="Afbeelding event">
-              <div class="spotlight-text-bl">
-                <h2>${event.title}</h2>
-                <h3>${event.location}</h3>
-                <p>
-                  ${event.start} u.
-                </p>
-              </div>
-            </a>
-          </li>`;
-      }
-    });
-    return html;
-  }
-
   // BUILD UI
 
   function buildUI(events) {
     $searchInfo.innerHTML = getHTMLForSearchInfo(events, $searchQuery);
-    $events.innerHTML = getHTMLForSearchedEvents(events);
+    $events.innerHTML = getHTMLForEvents(events);
   }
 
   // SEARCH
 
-  function searchEvents(data, buildUI) {
+  function searchEvents(events, buildUI) {
     const query = $searchQuery.toLowerCase().split(" ");
 
-    const filteredEvents = data.filter((event) => {
+    const filteredEvents = events.filter((event) => {
       return query.every((word) => {
         if (event.description) {
           return (
@@ -61,6 +44,7 @@
       });
     });
 
+    console.log(filteredEvents);
     buildUI(filteredEvents);
   }
 
@@ -68,14 +52,14 @@
 
   function registerListeners() {
     $searchForm.addEventListener("submit", () => {
-      searchEvents($data, buildUI);
+      searchEvents($eventsFiltered, buildUI);
     });
   }
 
   // INITIALIZE
 
   function initialize() {
-    searchEvents($data, buildUI);
+    searchEvents($eventsFiltered, buildUI);
     registerListeners();
   }
 

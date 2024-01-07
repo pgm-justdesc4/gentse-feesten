@@ -35,6 +35,25 @@ function getRandomArray(arrayLength, data) {
 
 /*
 ===================================
+Uniq Array
+===================================
+*/
+
+function getUniqArray(data) {
+  let array = [];
+
+  data.forEach((dataItem) => {
+    const inArray = array.some((item) => item === dataItem);
+
+    if (!inArray) {
+      array.push(dataItem);
+    }
+  });
+  return array;
+}
+
+/*
+===================================
 Get path for folder return
 ===================================
 */
@@ -91,9 +110,9 @@ Set url search params
 ===================================
 */
 
-function setSearchParams(searchInput, searchUrl) {
-  let url = searchUrl;
-  url += `search=${searchInput}`;
+function setSearchParams(input, newUrl) {
+  let url = newUrl;
+  url += `${input}`;
   return (window.location.href = url);
 }
 
@@ -121,5 +140,44 @@ function getHTMLForEvents(events) {
       </a>
     </li>`;
   });
+  return html;
+}
+
+/*
+===================================
+Get HTML for day navigation
+===================================
+*/
+
+function getHTMLForDayNavigation(day, start, end) {
+  let startDay = start;
+  let endDay = end;
+  let html = "";
+
+  for (let i = startDay; i <= endDay; i++) {
+    if (i === day) {
+      html += `
+      <li>
+          <a class="day-pointer" href="day.html?day=${i}">
+              <p>
+                  <strong>Di</strong>
+                  <br>
+                  ${i} juli
+                  </p>
+          </a>
+      </li>`;
+    } else {
+      html += `
+      <li>
+          <a href="day.html?day=${i}">
+              <p>
+                  <strong>Di</strong>
+                  <br>
+                  ${i} juli
+                  </p>
+          </a>
+      </li>`;
+    }
+  }
   return html;
 }
