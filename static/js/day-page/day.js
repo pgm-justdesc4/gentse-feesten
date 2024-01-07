@@ -3,6 +3,7 @@
   const $spotlight = document.getElementById("spotlight");
   const $filter = document.getElementById("filter");
   const $events = document.getElementById("events");
+  const $searchForm = document.getElementById("searchForm");
 
   const API_URL = "https://www.pgm.gent/data/gentsefeesten/events_500.json";
   const $data = await fetchData(API_URL);
@@ -102,9 +103,21 @@
     $events.innerHTML = getHTMLForDayEvents($categories, $dayEventsFiltered);
   }
 
+  // REGISTER LISTENERS
+
+  function registerListeners() {
+    $searchForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const $searchInput = document.querySelector("input").value.toLowerCase();
+      const searchUrl = `../search.html?search=${$searchInput}`;
+      window.location.href = searchUrl;
+    });
+  }
+
   // INITIALIZE
 
   function initialize() {
+    registerListeners();
     buildUI();
   }
 
