@@ -12,6 +12,7 @@
       html += `
         <li>
           <a href="events/detail.html?id=${newsPost.id}">
+            <div class="news__nav">
               <h2>${newsPost.title}</h2>
               <div class="arrow-right">
                   <div class="arrow-helper"></div>
@@ -19,6 +20,7 @@
                       <path fill="currentColor"
                       d="M12.5 7c.384 0 .768.146 1.06.439l8.26 8.261-8.26 8.261a1.5 1.5 0 0 1-2.121-2.122l6.14-6.14-6.14-6.139a1.502 1.502 0 0 1 1.06-2.561z" /></svg>
               </div>
+            </div>
               <figure>
                 <img src="${newsPost.picture.large}" alt="News image">
               </figure>

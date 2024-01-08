@@ -236,7 +236,7 @@ MENU
 
 .menu__close {
   position: absolute;
-  top: 1.1rem;
+  top: 2.35rem;
   right: 2rem;
   font-size: 2.5rem;
 }
@@ -360,6 +360,34 @@ footer {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 4rem;
+}
+
+/*
+===================================
+DAY NAVIGATOR
+===================================
+*/
+
+.day-nav {
+  background-color: black;
+}
+
+.day-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.day-nav li {
+  list-style: none;
+  background-color: hsl(0, 79%, 57%);
+}
+
+.day-nav .day-pointer {
+  width: 5rem;
+  height: 5rem;
 }
 
 /*
@@ -611,14 +639,22 @@ NEWS
 }
 
 .news li {
+  list-style: none;
   margin-bottom: 5rem;
   border: 0.1rem solid white;
 }
 
 .news a {
   display: flex;
+  justify-content: space-between;
   text-decoration: none;
   color: white;
+}
+
+.news .news__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .news .arrow-helper {
@@ -709,7 +745,31 @@ SEARCH
   gap: 2rem;
 }
 
-/*VERLOPIG*/
-a.day-pointer {
-  color: red;
+/*
+===================================
+DAY - Spotlight
+===================================
+*/
+
+.day-spotlight img {
+  max-width: 25rem;
+}
+
+.day-spotlight {
+  padding-bottom: 10rem;
+  background-color: black;
+}
+
+.day-spotlight ul {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.day-spotlight li {
+  list-style: none;
+}
+
+.day-spotlight a {
+  position: relative;
 }

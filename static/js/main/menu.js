@@ -30,7 +30,7 @@
         </div>
     <div class="menu__nav">
         <nav>
-        <a id="logo-menu" href="${$filePath}index.html">
+        <a href="${$filePath}index.html">
             <img src="${$filePath}static/img/Gentse Feesten Logos/GF-logo-2023-${$number}.svg" alt="Gentse Feesten logo">
         </a>
             <ul class="menu__nav-list">
@@ -122,11 +122,11 @@
             </ul>
         </nav>
     </div>
-    <figure id="logoLetterMenu" class="menu__letter">
+    <figure class="menu__letter">
         <img src="${$filePath}static/img/Gentse Feesten Logos/campagne-${$number}.png" alt="Gentse Feesten letter">
     </figure>
     <a class="menu__close" id="close" href="#">
-        X
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 53 32"><path fill="currentColor" d="m53.378 29.173-23.79-13.215 23.64-13.131L51.658 0 26.259 14.108 1.722.478.152 3.305l22.777 12.652L.001 28.693l1.57 2.827 24.688-13.713 25.55 14.192z"/></svg>
     </a>
 </div>`;
   }
