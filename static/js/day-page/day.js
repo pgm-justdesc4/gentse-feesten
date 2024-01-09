@@ -9,6 +9,7 @@
   const API_URL = "https://www.pgm.gent/data/gentsefeesten/events_500.json";
   const $data = await fetchData(API_URL);
   const $day = getParam("day");
+  const $days = ["Vr", "Za", "Zo", "Ma", "Di", "Wo", "Do", "Vr", "Za", "Zo"];
   const $searchUrl = "../search.html?search=";
 
   const $dayEvents = $data.filter((event) => event.day === $day);
@@ -24,12 +25,16 @@
 
   function getHTMLForFilter(categories) {
     let html = "";
+    categories.sort();
 
     categories.forEach((category) => {
       const id = categories.indexOf(category);
 
       html += `
         <li>
+          <figure>
+            <img src="../static/img/filter icoontjes/tag.svg" alt="Tag icon">
+          </figure>
             <a href="#${id}">
                 ${category}
             </a>
@@ -44,10 +49,12 @@
 
     categories.forEach((category) => {
       html += `
-        <div>
+        <div class="category">
             <h2 id="${id++}">${category}</h2>
             <a href="#filter">
+              <figure class="arrow-up">
                 <img src="../static/img/gentse-feesten-icoontjes/arrow-up.svg" alt="Arrow up">
+              </figure>
             </a>
         </div>
         <ul>
@@ -64,7 +71,12 @@
   // BUILD UI
 
   function buildUI() {
-    $dayNav.innerHTML = getHTMLForDayNavigation(JSON.parse($day), 14, 23);
+    $dayNav.innerHTML = getHTMLForDayNavigation(
+      JSON.parse($day),
+      $days,
+      14,
+      23
+    );
     $spotlight.innerHTML = getHTMLForEvents($randomEvents);
     $filter.innerHTML = getHTMLForFilter($categories);
     $events.innerHTML = getHTMLForDayEvents($categories, $dayEventsFiltered);

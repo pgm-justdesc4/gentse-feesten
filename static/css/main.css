@@ -38,6 +38,35 @@ main {
   overflow: hidden;
 }
 
+.event-text-bl {
+  position: absolute;
+  bottom: -8rem;
+  left: 0;
+  border: 0.1rem solid white;
+  padding: 2rem;
+  background-color: black;
+}
+
+.event-text-bl h2,
+.event-text-bl p {
+  color: white;
+}
+
+.event-text-bl h3 {
+  display: inline-block;
+  color: black;
+  background-color: hsl(0, 79%, 57%);
+  padding: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.event-text-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
 /*
 ===================================
 UTILITY CLASSES
@@ -376,18 +405,26 @@ DAY NAVIGATOR
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  padding: 2rem 0;
+  gap: 0.2rem;
+  padding: 5rem 0;
 }
 
 .day-nav li {
   list-style: none;
   background-color: hsl(0, 79%, 57%);
+  padding: 2rem 1.5rem;
+}
+
+.day-nav a {
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: black;
 }
 
 .day-nav .day-pointer {
-  width: 5rem;
-  height: 5rem;
+  font-size: 2rem;
+  padding: 3.5rem 2.5rem;
 }
 
 /*
@@ -491,28 +528,6 @@ HOME - Spotlight
 .home-spotlight__events a {
   position: relative;
   text-decoration: none;
-}
-
-.spotlight-text-bl {
-  position: absolute;
-  bottom: -8rem;
-  left: 0;
-  border: 0.1rem solid white;
-  padding: 2rem;
-  background-color: black;
-}
-
-.spotlight-text-bl h2,
-.spotlight-text-bl p {
-  color: white;
-}
-
-.spotlight-text-bl h3 {
-  display: inline-block;
-  color: black;
-  background-color: hsl(0, 79%, 57%);
-  padding: 0.5rem;
-  margin: 1.5rem 0;
 }
 
 /*
@@ -772,4 +787,183 @@ DAY - Spotlight
 
 .day-spotlight a {
   position: relative;
+}
+
+/*
+===================================
+DAY - Filter
+===================================
+*/
+
+.day-filter {
+  color: white;
+  background-color: black;
+}
+
+.day-filter svg {
+  color: hsl(31, 49%, 81%);
+  width: 1.2rem;
+}
+
+.day-filter img {
+  width: 1.5rem;
+}
+
+.day-filter__menu {
+  display: flex;
+  border: 0.1rem solid hsl(31, 49%, 81%);
+}
+
+.day-filter__menu ul {
+  display: flex;
+  align-items: center;
+}
+
+.day-filter__menu li {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.day-filter__options li {
+  list-style: none;
+}
+
+.day-filter__category {
+  color: black;
+  background-color: hsl(31, 49%, 81%);
+}
+
+.filter-categories {
+  background-color: hsl(31, 49%, 81%);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter-categories li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  width: 25rem;
+  margin: 0 5rem;
+}
+
+.filter-categories a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+}
+
+.day-filter .search-form {
+  justify-content: flex-start;
+}
+
+.day-filter .search-form input {
+  width: 25rem;
+}
+
+/*
+===================================
+DAY - Events
+===================================
+*/
+
+.day-events {
+  color: white;
+  background-color: black;
+}
+
+.day-events .container {
+  max-width: 100rem;
+}
+
+.day-events img {
+  width: 29rem;
+}
+
+.day-events .category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.day-events .arrow-up img {
+  width: 2rem;
+}
+
+.day-events ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  padding-bottom: 7rem;
+}
+
+.day-events li {
+  position: relative;
+  list-style: none;
+  margin-bottom: 10rem;
+}
+
+.day-events .category h2 {
+  font-size: 2rem;
+}
+
+.day-events .category img {
+  width: 1.5rem;
+}
+
+/*
+===================================
+DAY - Search
+===================================
+*/
+
+.day-search {
+  background-color: black;
+  padding-bottom: 5rem;
+}
+
+.day-search .container {
+  background-color: hsl(0, 79%, 57%);
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.day-search h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.day-search h3 {
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.day-search__form input {
+  width: 35rem;
+  color: black;
+  background-color: white;
+}
+
+.day-search__form button {
+  background-color: white;
+}
+
+.day-search__form button:hover {
+  background-color: black;
+}
+
+.day-search__form button:hover svg {
+  color: white;
+}
+
+.day-search__form svg {
+  color: black;
 }

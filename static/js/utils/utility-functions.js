@@ -132,12 +132,14 @@ function getHTMLForEvents(events) {
         <img src="${
           event.image.full ? event.image.full : event.image.thumb
         }" alt="Afbeelding event">
-        <div class="spotlight-text-bl">
+        <div class="event-text-bl">
           <h2>${event.title}</h2>
-          <h3>${event.location}</h3>
-          <p>
-            ${event.start} u.
-          </p>
+          <div class="event-text-flex">
+            <h3>${event.location}</h3>
+            <p>
+              ${event.start} u.
+            </p>
+          </div>
         </div>
       </a>
     </li>`;
@@ -151,9 +153,10 @@ Get HTML for day navigation
 ===================================
 */
 
-function getHTMLForDayNavigation(day, start, end) {
+function getHTMLForDayNavigation(day, days, start, end) {
   let startDay = start;
   let endDay = end;
+  let dayIndex = 0;
   let html = "";
 
   for (let i = startDay; i <= endDay; i++) {
@@ -162,7 +165,7 @@ function getHTMLForDayNavigation(day, start, end) {
       <li class="day-pointer">
           <a href="day.html?day=${i}">
               <p>
-                  <strong>Di</strong>
+                  <strong>${days[dayIndex++]}</strong>
                   <br>
                   ${i} juli
               </p>
@@ -173,7 +176,7 @@ function getHTMLForDayNavigation(day, start, end) {
       <li>
           <a href="day.html?day=${i}">
               <p>
-                  <strong>Di</strong>
+                  <strong>${days[dayIndex++]}</strong>
                   <br>
                   ${i} juli
               </p>
