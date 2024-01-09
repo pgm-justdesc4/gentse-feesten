@@ -6,8 +6,9 @@
 
   const API_URL = "https://www.pgm.gent/data/gentsefeesten/events_500.json";
   const $data = await fetchData(API_URL);
+  const $filePath = getPath("day=");
   const $day = getParam("day");
-  const $days = ["Vr", "Za", "Zo", "Ma", "Di", "Wo", "Do", "Vr", "Za", "Zo"];
+  const $days = ["Vr", "Za", "Zo", "Ma", "Di", "Wo", "Do"];
 
   const $dayEvents = $data.filter((event) => event.day === $day);
   const $dayEventsFiltered = $dayEvents.filter(
@@ -58,7 +59,8 @@
         ${getHTMLForEvents(
           dayEvents.filter((event) => {
             return event.category.includes(category);
-          })
+          }),
+          $filePath
         )}
         </ul>`;
     });
@@ -74,7 +76,7 @@
       14,
       23
     );
-    $spotlight.innerHTML = getHTMLForEvents($randomEvents);
+    $spotlight.innerHTML = getHTMLForEvents($randomEvents, $filePath);
     $filter.innerHTML = getHTMLForFilter($categories);
     $events.innerHTML = getHTMLForDayEvents($categories, $dayEventsFiltered);
   }

@@ -122,7 +122,7 @@ Get HTML for events
 ===================================
 */
 
-function getHTMLForEvents(events) {
+function getHTMLForEvents(events, filePath = "./") {
   let html = "";
 
   events.forEach((event) => {
@@ -159,9 +159,14 @@ function getHTMLForDayNavigation(day, days, start, end) {
   let startDay = start;
   let endDay = end;
   let dayIndex = 0;
+
   let html = "";
 
   for (let i = startDay; i <= endDay; i++) {
+    if (dayIndex > days.length - 1) {
+      dayIndex = 0;
+    }
+
     if (i === day) {
       html += `
       <li class="day-pointer">

@@ -3,7 +3,7 @@
   const $letter = document.getElementById("logo-letter");
   const $logoFooter = document.getElementById("logo-footer");
   const $letterFooter = document.getElementById("logo-letter-footer");
-  const $filePath = getPath("day.html");
+  const $filePath = getPath("day=");
 
   // RENDER HTML
 
