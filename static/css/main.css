@@ -38,6 +38,10 @@ main {
   overflow: hidden;
 }
 
+h1 {
+  font-size: 3.5rem;
+}
+
 .event-text-bl {
   position: absolute;
   bottom: -8rem;

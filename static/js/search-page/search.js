@@ -2,15 +2,16 @@
   const API_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
   const $data = await fetchData(API_URL);
 
-  const $searchForm = document.getElementById("searchForm");
   const $searchInfo = document.getElementById("searchInfo");
   const $events = document.getElementById("searchedEvents");
+  const $searchInput = document.querySelector("input");
 
   const $eventsFiltered = $data.filter(
     (event) => event.image && event.location && event.description
   );
 
   const $searchQuery = getParam("search");
+  $searchInput.value = $searchQuery;
 
   // RENDER HTML
 
@@ -48,19 +49,10 @@
     buildUI(filteredEvents);
   }
 
-  // REGISTER LISTENERS
-
-  function registerListeners() {
-    $searchForm.addEventListener("submit", () => {
-      searchEvents($eventsFiltered, buildUI);
-    });
-  }
-
   // INITIALIZE
 
   function initialize() {
     searchEvents($eventsFiltered, buildUI);
-    registerListeners();
   }
 
   initialize();
