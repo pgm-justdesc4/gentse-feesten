@@ -505,7 +505,7 @@ HOME - Spotlight
 .home-spotlight {
   background-color: black;
   padding: 10rem 0;
-  padding-bottom: 7rem; /*VERLOPIG*/
+  padding-bottom: 7rem;
 }
 
 .home-spotlight .container {
@@ -711,6 +711,10 @@ SEARCH
   padding-bottom: 5rem;
 }
 
+.search .container {
+  max-width: 100rem;
+}
+
 .search img {
   width: 20rem;
 }
@@ -758,10 +762,27 @@ SEARCH
   color: black;
 }
 
+.search-info {
+  font-size: 1.75rem;
+  text-align: center;
+  margin: 2.5rem 0;
+}
+
 .searched-events {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
+}
+
+.searched-events li {
+  position: relative;
+  list-style: none;
+  margin-bottom: 8rem;
+}
+
+.searched-events img {
+  width: 25rem;
 }
 
 /*

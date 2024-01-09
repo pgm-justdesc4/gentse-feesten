@@ -128,7 +128,9 @@ function getHTMLForEvents(events) {
   events.forEach((event) => {
     html += `
     <li>
-      <a href="events/detail.html?day=${event.day}&slug=${event.slug}">
+      <a href="${filePath}events/detail.html?day=${event.day}&slug=${
+      event.slug
+    }">
         <img src="${
           event.image.full ? event.image.full : event.image.thumb
         }" alt="Afbeelding event">

@@ -3,14 +3,11 @@
   const $spotlight = document.getElementById("spotlight");
   const $filter = document.getElementById("filter");
   const $events = document.getElementById("events");
-  const $searchForm = document.getElementById("searchForm");
-  const $searchFormBottom = document.getElementById("searchFormBottom");
 
   const API_URL = "https://www.pgm.gent/data/gentsefeesten/events_500.json";
   const $data = await fetchData(API_URL);
   const $day = getParam("day");
   const $days = ["Vr", "Za", "Zo", "Ma", "Di", "Wo", "Do", "Vr", "Za", "Zo"];
-  const $searchUrl = "../search.html?search=";
 
   const $dayEvents = $data.filter((event) => event.day === $day);
   const $dayEventsFiltered = $dayEvents.filter(
@@ -82,35 +79,10 @@
     $events.innerHTML = getHTMLForDayEvents($categories, $dayEventsFiltered);
   }
 
-  // REGISTER LISTENERS
-
-  function registerListeners() {
-    $searchForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const searchInput = document
-        .getElementById("searchInput")
-        .value.toLowerCase();
-
-      setSearchParams(searchInput, $searchUrl);
-    });
-
-    $searchFormBottom.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const searchInput = document
-        .getElementById("searchInputBottom")
-        .value.toLowerCase();
-
-      setSearchParams(searchInput, $searchUrl);
-    });
-  }
-
   // INITIALIZE
 
   function initialize() {
     buildUI();
-    registerListeners();
   }
 
   initialize();
