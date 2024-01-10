@@ -1,7 +1,7 @@
 (function () {
   const $menu = document.getElementById("menu");
   const $menuBtn = document.getElementById("menu-btn");
-  const $filePath = getPath("day.html");
+  const $filePath = getPath("day");
 
   // RENDER HTML
 

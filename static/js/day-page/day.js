@@ -4,7 +4,7 @@
   const $filter = document.getElementById("filter");
   const $events = document.getElementById("events");
 
-  const API_URL = "https://www.pgm.gent/data/gentsefeesten/events_500.json";
+  const API_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
   const $data = await fetchData(API_URL);
   const $filePath = getPath("day=");
   const $day = getParam("day");

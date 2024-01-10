@@ -44,11 +44,16 @@ h1 {
 
 .event-text-bl {
   position: absolute;
-  bottom: -8rem;
+  bottom: -11rem;
   left: 0;
+  max-width: 23.5rem;
   border: 0.1rem solid white;
   padding: 2rem;
   background-color: black;
+}
+
+.event-text-bl h2 {
+  font-size: 1.25rem;
 }
 
 .event-text-bl h2,
@@ -58,6 +63,7 @@ h1 {
 
 .event-text-bl h3 {
   display: inline-block;
+  font-size: 1rem;
   color: black;
   background-color: hsl(0, 79%, 57%);
   padding: 0.5rem;
@@ -69,6 +75,10 @@ h1 {
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
+}
+
+.event:hover .event-text-bl {
+  transform: translateX(10%) translateY(-10%);
 }
 
 /*
@@ -823,18 +833,24 @@ DAY - Filter
 .day-filter {
   color: white;
   background-color: black;
+  padding: 3rem 0;
 }
 
 .day-filter svg {
   color: hsl(31, 49%, 81%);
-  width: 1.2rem;
+  width: 1.5rem;
 }
 
 .day-filter img {
   width: 1.5rem;
 }
 
+.day-filter h2 {
+  font-size: 2.75rem;
+}
+
 .day-filter__menu {
+  max-height: 3.5rem;
   display: flex;
   border: 0.1rem solid hsl(31, 49%, 81%);
 }
@@ -842,10 +858,12 @@ DAY - Filter
 .day-filter__menu ul {
   display: flex;
   align-items: center;
+  padding: 0;
 }
 
 .day-filter__menu li {
   cursor: pointer;
+  text-align: center;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -854,6 +872,8 @@ DAY - Filter
 
 .day-filter__options li {
   list-style: none;
+  border-left: 0.1rem solid hsl(31, 49%, 81%);
+  border-right: 0.1rem solid hsl(31, 49%, 81%);
 }
 
 .day-filter__category {
@@ -864,7 +884,9 @@ DAY - Filter
 .filter-categories {
   background-color: hsl(31, 49%, 81%);
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
+  padding: 2rem;
 }
 
 .filter-categories li {
@@ -874,13 +896,16 @@ DAY - Filter
   gap: 0.5rem;
   padding: 1rem;
   width: 25rem;
-  margin: 0 5rem;
+}
+
+.filter-categories figure {
+  width: 3rem;
 }
 
 .filter-categories a {
   text-decoration: none;
   color: black;
-  font-size: 1.1rem;
+  font-size: 1.35rem;
 }
 
 .day-filter .search-form {
@@ -991,4 +1016,47 @@ DAY - Search
 
 .day-search__form svg {
   color: black;
+}
+
+/*
+===================================
+DETAIL
+===================================
+*/
+
+.detail {
+  color: white;
+  background-color: black;
+}
+
+.detail .arrow-left svg {
+  color: white;
+}
+
+.detail .arrow-helper {
+  background-color: white;
+}
+
+.detail__event {
+  display: flex;
+  gap: 5rem;
+}
+
+.detail__event-info {
+  display: flex;
+  gap: 5rem;
+}
+
+.detail__location {
+  text-align: center;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  background-color: hsl(0, 79%, 57%);
+  max-width: 10rem;
+}
+
+.detail__location img {
+  width: 1.2rem;
 }
