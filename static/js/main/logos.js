@@ -4,7 +4,6 @@
   const $logoFooter = document.getElementById("logo-footer");
   const $letterFooter = document.getElementById("logo-letter-footer");
   const $filePath = getPath("day");
-  console.log($filePath);
 
   // RENDER HTML
 

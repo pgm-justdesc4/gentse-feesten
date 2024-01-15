@@ -1,6 +1,5 @@
 (async function () {
-  const API_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
-  const $data = await fetchData(API_URL);
+  const $data = await fetchData(API_URL_EVENTS);
   const $spotlight = document.getElementById("spotlight");
   const $eventsFiltered = $data.filter(
     (events) => events.image && events.location

@@ -4,8 +4,7 @@
   const $filter = document.getElementById("filter");
   const $events = document.getElementById("events");
 
-  const API_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
-  const $data = await fetchData(API_URL);
+  const $data = await fetchData(API_URL_EVENTS);
   const $filePath = getPath("day=");
   const $day = getParam("day");
   const $days = ["Vr", "Za", "Zo", "Ma", "Di", "Wo", "Do"];

@@ -1,6 +1,5 @@
 (async function () {
-  const API_URL = "https://www.pgm.gent/data/gentsefeesten/events.json";
-  const $data = await fetchData(API_URL);
+  const $data = await fetchData(API_URL_EVENTS);
 
   const $searchInfo = document.getElementById("searchInfo");
   const $events = document.getElementById("searchedEvents");
@@ -45,7 +44,6 @@
       });
     });
 
-    console.log(filteredEvents);
     buildUI(filteredEvents);
   }
 
