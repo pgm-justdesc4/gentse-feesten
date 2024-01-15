@@ -478,33 +478,6 @@ DAY NAVIGATOR
 
 /*
 ===================================
-GRID TOGGLER
-===================================
-*/
-
-.grid-toggler {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.grid-list {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-}
-
-.grid-list img {
-  display: none;
-}
-
-.grid-list .event-text-bl {
-  position: static;
-  margin: 0;
-}
-
-/*
-===================================
 HOME - Days
 ===================================
 */
@@ -1143,4 +1116,48 @@ DETAIL
 
 .detail__location img {
   width: 1.2rem;
+}
+
+/*
+===================================
+GRID TOGGLER
+===================================
+*/
+
+.grid-toggler {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.grid-list li {
+  margin-bottom: 0;
+}
+
+.grid-list .event img {
+  display: none;
+}
+
+.grid-list ul {
+  flex-direction: column;
+  gap: 0;
+  padding-bottom: 0;
+}
+
+.grid-list .event-text-bl {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  position: static;
+  max-width: 100%;
+  margin: 0;
+}
+
+.grid-list .flex-order {
+  order: -1;
+}
+
+.searched-events.grid-list {
+  display: block;
 }

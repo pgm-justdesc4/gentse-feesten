@@ -138,10 +138,10 @@ function getHTMLForEvents(events, filePath = "./") {
               <h2>${event.title}</h2>
             <div class="event-text-flex">
               <h3>${event.location}</h3>
-              <p>
+              </div>
+              <p class="flex-order">
                 ${event.start} u.
               </p>
-            </div>
         </div>
       </a>
     </li>`;
