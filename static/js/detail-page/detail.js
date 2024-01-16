@@ -14,6 +14,18 @@
 
   // RENDER HTML
 
+  function getHTMLForWeelchair(wheelchair) {
+    let html = "";
+
+    if (wheelchair === true) {
+      html += `
+        <figure class="wheelchair">
+            <img src="../static/img/gentse-feesten-icoontjes/wheelchair.svg" alt="Wheelchair icon">
+        </figure>`;
+    }
+    return html;
+  }
+
   function getHTMLForCategories(categories, day) {
     let html = "";
 
@@ -31,7 +43,6 @@
   function getHTMLForDetail(eventInArray) {
     const event = eventInArray[0];
     return `
-    <div class="detail__event">
     <div>
         <a href="day.html?day=${event.day}">
             <div class="arrow-left">
@@ -40,10 +51,10 @@
                         d="M20.321 24.4c-.384 0-.768-.146-1.06-.439L11 15.701l8.26-8.262a1.5 1.5 0 0 1 2.121 2.122l-6.14 6.14 6.14 6.14a1.503 1.503 0 0 1-1.06 2.56" />
                 </svg>
                 <div class="arrow-helper"></div>
+                <p>
+                    Overzicht ${event.day} juli
+                </p>
             </div>
-            <p>
-                Overzicht ${event.day} juli
-            </p>
         </a>
         <h1>${event.title}</h1>
         <div class="detail__loc-time">
@@ -65,31 +76,30 @@
         <div class="detail__event-info">
             <ul>
                 <li>
-                    Organisator:
-                </li>
-                <li>
-                    Website:
-                </li>
-                <li>
-                    Categorieën:
-                </li>
-            </ul>
-            <ul>
-                <li>
+                    <p>
+                        Organisator:
+                    </p>
                     <a href="${event.url ? event.url : "#"}">
                         ${event.organizer}
                     </a>
                 </li>
                 <li>
+                    <p>
+                        Website:
+                    </p>
                     <a href="${event.url ? event.url : ""}">
                         ${event.url ? event.url : ""}
                     </a>
                 </li>
                 <li>
+                    <p>
+                        Categorieën:
+                    </p>
                     <ul>
                         ${getHTMLForCategories(event.category, $day)}
                     </ul>
                 </li>
+                ${getHTMLForWeelchair(event.wheelchair_accessible)}
             </ul>
         </div>
     </div>
@@ -99,8 +109,18 @@
               event.image.full ? event.image.full : event.image.thumb
             }" alt="Event image">
         </figure>
+        <div class="detail__socials">
+            <a href="#">
+                <img src="../static/img/gentse-feesten-icoontjes/twitter.svg" alt="Twitter icon">
+            </a>
+            <a href="#">
+                <img src="../static/img/gentse-feesten-icoontjes/facebook.svg" alt="Facebook icon">
+            </a>
+            <a href="#">
+                <img src="../static/img/gentse-feesten-icoontjes/pinterest.svg" alt="Pinterest icon">
+            </a>
+        </div>
     </div>
-</div>
     `;
   }
 

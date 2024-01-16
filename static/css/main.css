@@ -1062,10 +1062,40 @@ DETAIL
 .detail {
   color: white;
   background-color: black;
+  padding: 2rem 0 7rem 0;
+}
+
+.detail a {
+  color: white;
+  text-decoration: none;
+}
+
+.detail ul a {
+  text-decoration: underline;
+}
+
+.detail li {
+  list-style: none;
+}
+
+.detail ul {
+  padding: 0;
+}
+
+.detail .arrow-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.detail .arrow-left p {
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .detail .arrow-left svg {
   color: white;
+  transform: translateX(0.75rem);
 }
 
 .detail .arrow-helper {
@@ -1074,7 +1104,7 @@ DETAIL
 
 .detail__event {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 5rem;
 }
 
@@ -1091,6 +1121,12 @@ DETAIL
 .detail__event-info {
   display: flex;
   gap: 5rem;
+}
+
+.detail__event-info li {
+  width: 100%;
+  display: flex;
+  gap: 4rem;
 }
 
 .detail__loc-time {
@@ -1111,6 +1147,21 @@ DETAIL
 
 .detail__location img {
   width: 1.2rem;
+}
+
+.wheelchair {
+  width: 1.5rem;
+}
+
+.detail__socials {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.detail__socials a img {
+  background-color: white;
+  width: 2rem;
+  border-radius: 50%;
 }
 
 /*
