@@ -81,6 +81,7 @@ UTILITY CLASSES
   justify-content: center;
 }
 
+/* Arrows */
 .arrow-right,
 .arrow-left {
   display: flex;
@@ -105,9 +106,10 @@ div.arrow-left svg {
   background-color: black;
 }
 
+/* Events */
 .event-text-bl {
   position: absolute;
-  bottom: -11rem;
+  bottom: -7rem;
   left: 0;
   max-width: 23.5rem;
   border: 0.1rem solid white;
@@ -124,20 +126,16 @@ div.arrow-left svg {
   color: white;
 }
 
+.event-text-bl p {
+  display: inline-block;
+}
+
 .event-text-bl h3 {
   display: inline-block;
   font-size: 1rem;
   color: black;
   background-color: hsl(0, 79%, 57%);
   padding: 0.5rem;
-  margin: 1.5rem 0;
-}
-
-.event-text-flex {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1rem;
 }
 
 .event:hover .event-text-bl {
@@ -382,7 +380,6 @@ footer {
 }
 
 /* Footer Info */
-
 .footer-info {
   background-color: black;
   padding-top: 5rem;
@@ -513,7 +510,6 @@ HOME - Days
 }
 
 /* Grid */
-
 .home-days__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -684,7 +680,6 @@ HOME - News
 }
 
 /* Grid */
-
 .home-news__articles-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -972,7 +967,7 @@ DAY - Events
 }
 
 .day-events img {
-  width: 29rem;
+  width: 27rem;
 }
 
 .day-events .category {
@@ -1131,10 +1126,21 @@ GRID TOGGLER
   gap: 0.5rem;
 }
 
-.grid-list li {
-  margin-bottom: 0;
+.grid-toggler a {
+  padding: 0.5rem;
 }
 
+.grid-toggler a:hover,
+.grid-toggler a:active {
+  background-color: hsl(0, 79%, 57%);
+}
+
+.grid-toggler a:hover svg,
+.grid-toggler a:active svg {
+  color: black;
+}
+
+/* Events */
 .grid-list .event img {
   display: none;
 }
@@ -1145,6 +1151,14 @@ GRID TOGGLER
   padding-bottom: 0;
 }
 
+.grid-list li {
+  margin-bottom: 0;
+}
+
+.grid-list a {
+  text-decoration: none;
+}
+
 .grid-list .event-text-bl {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1152,6 +1166,17 @@ GRID TOGGLER
   position: static;
   max-width: 100%;
   margin: 0;
+  padding: 1rem;
+}
+
+.grid-list .event-text-bl h2 {
+  padding: 0 1.5rem;
+}
+
+.grid-list h3 {
+  color: white;
+  background-color: transparent;
+  padding-left: 1.5rem;
 }
 
 .grid-list .flex-order {
@@ -1160,4 +1185,21 @@ GRID TOGGLER
 
 .searched-events.grid-list {
   display: block;
+}
+
+.grid-list .grid-list__border {
+  max-height: 180%;
+  border-left: 0.1rem solid white;
+  border-right: 0.1rem solid white;
+}
+
+.grid-list .event:hover .event-text-bl {
+  transform: translateX(0%) translateY(0%);
+  background-color: white;
+}
+
+.grid-list .event:hover .grid-list__border h2,
+.grid-list .event:hover h3,
+.grid-list .event:hover .flex-order {
+  color: black;
 }

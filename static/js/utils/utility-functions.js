@@ -128,23 +128,21 @@ function getHTMLForEvents(events, filePath = "./") {
   events.forEach((event) => {
     html += `
     <li class="event">
-      <a href="${filePath}events/detail.html?day=${event.day}&slug=${
-      event.slug
-    }">
+    <a href="${filePath}events/detail.html?day=${event.day}&slug=${event.slug}">
         <img src="${
           event.image.full ? event.image.full : event.image.thumb
         }" alt="Afbeelding event">
-          <div class="event-text-bl">
-              <h2>${event.title}</h2>
-            <div class="event-text-flex">
-              <h3>${event.location}</h3>
-              </div>
-              <p class="flex-order">
+        <div class="event-text-bl">
+            <div class="grid-list__border">
+                <h2>${event.title}</h2>
+            </div>
+            <h3>${event.location}</h3>
+            <p class="flex-order">
                 ${event.start} u.
-              </p>
+            </p>
         </div>
-      </a>
-    </li>`;
+    </a>
+</li>`;
   });
   return html;
 }
