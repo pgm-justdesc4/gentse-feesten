@@ -1126,7 +1126,12 @@ DETAIL
 .detail__event-info li {
   width: 100%;
   display: flex;
-  gap: 4rem;
+  gap: 5rem;
+  margin: 1rem 0;
+}
+
+.detail__event-info-categories li {
+  margin: 0;
 }
 
 .detail__loc-time {
@@ -1162,6 +1167,36 @@ DETAIL
   background-color: white;
   width: 2rem;
   border-radius: 50%;
+}
+
+/*
+===================================
+DETAIL - Map
+===================================
+*/
+
+.detail-map {
+  padding-bottom: 7rem;
+  background-color: black;
+}
+
+.detail-map .container {
+  display: flex;
+  justify-content: center;
+}
+
+.detail-map img {
+  max-width: 50rem;
+}
+
+.detail-map__info {
+  padding: 1rem 7rem 0 2rem;
+  background-color: hsl(0, 79%, 57%);
+}
+
+.detail-map__info .detail__location {
+  color: white;
+  background-color: black;
 }
 
 /*
@@ -1247,6 +1282,11 @@ GRID TOGGLER
 .grid-list .event:hover .event-text-bl {
   transform: translateX(0%) translateY(0%);
   background-color: white;
+}
+
+.grid-list .event:hover .grid-list__border {
+  border-left: 0.1rem solid black;
+  border-right: 0.1rem solid black;
 }
 
 .grid-list .event:hover .grid-list__border h2,

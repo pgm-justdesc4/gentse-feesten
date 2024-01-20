@@ -1,16 +1,17 @@
 (async function () {
   const $dayNav = document.getElementById("dayNav");
   const $detail = document.getElementById("detail");
+  const $map = document.getElementById("locationMap");
 
   const $data = await fetchData(API_URL_EVENTS);
   const $days = ["Vr", "Za", "Zo", "Ma", "Di", "Wo", "Do"];
   const $day = getParam("day");
   const $slug = getParam("slug");
 
-  const $event = $data.filter(
+  const eventInArray = $data.filter(
     (event) => event.day === $day && event.slug === $slug
   );
-  console.log($event);
+  const $event = eventInArray[0];
 
   // RENDER HTML
 
@@ -40,8 +41,7 @@
     return html;
   }
 
-  function getHTMLForDetail(eventInArray) {
-    const event = eventInArray[0];
+  function getHTMLForDetail(event) {
     return `
     <div>
         <a href="day.html?day=${event.day}">
@@ -95,7 +95,7 @@
                     <p>
                         Categorieën:
                     </p>
-                    <ul>
+                    <ul class="detail__event-info-categories">
                         ${getHTMLForCategories(event.category, $day)}
                     </ul>
                 </li>
@@ -120,8 +120,21 @@
                 <img src="../static/img/gentse-feesten-icoontjes/pinterest.svg" alt="Pinterest icon">
             </a>
         </div>
-    </div>
-    `;
+    </div>`;
+  }
+
+  function getHTMLForDetailLocation(event) {
+    return `
+    <div>
+        <div class="detail__location">
+            <figure>
+                <img src="../static/img/filter icoontjes/location.svg" alt="Location icon">
+            </figure>
+            <p>
+                ${event.location}
+            </p>
+        </div>
+    </div>`;
   }
 
   // BUILD UI
@@ -134,6 +147,7 @@
       23
     );
     $detail.innerHTML = getHTMLForDetail($event);
+    $map.innerHTML = getHTMLForDetailLocation($event);
   }
 
   // INITIALIZE
