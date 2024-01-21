@@ -10,9 +10,10 @@
     news.forEach((newsPost) => {
       html += `
         <li>
-          <a href="events/detail.html?id=${newsPost.id}">
+          <a href="#">
             <div class="news__nav">
               <h2>${newsPost.title}</h2>
+              <div class="news-red-box"></div>
               <div class="arrow-right">
                   <div class="arrow-helper"></div>
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">

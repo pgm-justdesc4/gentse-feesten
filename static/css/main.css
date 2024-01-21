@@ -821,6 +821,10 @@ NEWS
   background-color: black;
 }
 
+.news ul {
+  margin-top: 3rem;
+}
+
 .news li {
   list-style: none;
   margin-bottom: 5rem;
@@ -835,9 +839,12 @@ NEWS
 }
 
 .news .news__nav {
+  font-size: 1.25rem;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 1rem;
 }
 
 .news .arrow-helper {
@@ -855,12 +862,75 @@ NEWS
 }
 
 .news .page-nav li {
+  cursor: pointer;
   display: inline-block;
   border: 0.1rem solid white;
-  border-radius: 25%;
+  border-radius: 50%;
   list-style: none;
   font-size: 2rem;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+.news .page-nav .page-nav__pointer {
+  border: 0;
+  background-color: hsl(0, 79%, 57%);
+}
+
+.news .page-nav .page-nav__pointer a {
+  color: black;
+}
+
+.news li h2 {
+  max-width: 25rem;
+  z-index: 1;
+}
+
+.news li figure {
+  width: 50rem;
+  height: 27rem;
+}
+
+.news li figure img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.news-red-box {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 37rem;
+  height: 7rem;
+  background-color: hsl(0, 79%, 57%);
+}
+
+.news li:hover {
+  border: 0;
+  transition: 0.2s;
+}
+
+.news li:hover h2 {
+  color: black;
+}
+
+.news li:hover .news-red-box {
+  display: block;
+  transition: 0.2s;
+}
+
+.news li:hover .arrow-helper {
+  width: 7.5rem;
+  transition: 0.2s;
+}
+
+.page-nav__hover:hover {
+  background-color: white;
+}
+
+.page-nav__hover:hover a {
+  color: black;
 }
 
 /*
