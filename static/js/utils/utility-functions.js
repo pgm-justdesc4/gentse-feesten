@@ -129,17 +129,17 @@ function getHTMLForEvents(events, filePath = "./") {
     html += `
     <li class="event">
     <a href="${filePath}events/detail.html?day=${event.day}&slug=${event.slug}">
-        <img src="${
-          event.image.full ? event.image.full : event.image.thumb
-        }" alt="Afbeelding event">
+        <figure class="event-img-container">
+            <img src="${
+              event.image.full ? event.image.full : event.image.thumb
+            }" alt="Afbeelding event">
+        </figure>
         <div class="event-text-bl">
             <div class="grid-list__border">
                 <h2>${event.title}</h2>
             </div>
             <h3>${event.location}</h3>
-            <p class="flex-order">
-                ${event.start} u.
-            </p>
+            <p class="flex-order">${event.start} u.</p>
         </div>
     </a>
 </li>`;

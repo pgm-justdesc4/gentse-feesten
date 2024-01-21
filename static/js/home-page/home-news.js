@@ -12,7 +12,7 @@
       html += `
       <article>
         <a href="news.html">
-            <p>${newsPost.title}</p>
+            <h3>${newsPost.title}</h3>
             <div class="arrow-right">
                 <div class="arrow-helper"></div>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
