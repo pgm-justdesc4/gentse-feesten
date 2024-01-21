@@ -110,6 +110,7 @@ div.arrow-left svg {
 
 .event {
   position: relative;
+  list-style: none;
 }
 
 .event-text-bl {
@@ -497,6 +498,10 @@ DAY NAVIGATOR
   background-color: black;
 }
 
+.day-nav .container {
+  max-width: 85rem;
+}
+
 .day-nav ul {
   display: flex;
   justify-content: center;
@@ -506,21 +511,38 @@ DAY NAVIGATOR
 }
 
 .day-nav li {
+  cursor: pointer;
   list-style: none;
   background-color: hsl(0, 79%, 57%);
-  padding: 2rem 1.5rem;
+  padding: 1rem 2rem;
 }
 
 .day-nav a {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   text-align: center;
   text-decoration: none;
   color: black;
 }
 
+.day-nav a strong {
+  font-size: 2rem;
+}
+
 .day-nav .day-pointer {
   font-size: 2rem;
-  padding: 3.5rem 2.5rem;
+  padding: 2.5rem 2rem;
+}
+
+.day-nav li:hover {
+  background-color: black;
+}
+
+.day-nav .day-pointer:hover {
+  background-color: hsl(0, 79%, 57%);
+}
+
+.day-nav li:hover a {
+  color: white;
 }
 
 /*
@@ -1100,13 +1122,29 @@ DAY - Filter
   border-right: 0.1rem solid hsl(31, 49%, 81%);
 }
 
+.day-filter__options li:hover {
+  background-color: white;
+}
+
+.day-filter__options li:hover svg {
+  color: black;
+}
+
+.day-filter__options .day-filter__category:hover {
+  background-color: hsl(31, 49%, 81%);
+}
+
 .day-filter__category {
   color: black;
   background-color: hsl(31, 49%, 81%);
 }
 
+.day-filter__extra svg:hover {
+  background-color: white;
+}
+
 .filter-categories {
-  background-color: hsl(31, 49%, 81%);
+  background-color: hsl(31, 48%, 81%);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -1130,6 +1168,10 @@ DAY - Filter
   text-decoration: none;
   color: black;
   font-size: 1.35rem;
+}
+
+.filter-categories a:hover {
+  text-decoration: underline;
 }
 
 .day-filter .search-form {
