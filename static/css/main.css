@@ -1296,6 +1296,11 @@ DETAIL
   padding: 2rem 0 7rem 0;
 }
 
+.detail .container {
+  position: relative;
+  padding-top: 5rem;
+}
+
 .detail a {
   color: white;
   text-decoration: none;
@@ -1311,6 +1316,18 @@ DETAIL
 
 .detail ul {
   padding: 0;
+}
+
+.detail .detail__goday {
+  font-size: 1.2rem;
+  position: absolute;
+  top: 0;
+  left: -3.5rem;
+}
+
+.detail .detail__goday:hover .arrow-helper {
+  width: 7.5rem;
+  transition: 0.4s;
 }
 
 .detail .arrow-left {
@@ -1392,12 +1409,17 @@ DETAIL
 .detail__socials {
   display: flex;
   gap: 0.5rem;
+  margin-top: 2rem;
 }
 
-.detail__socials a img {
+.detail__socials a svg {
   background-color: white;
-  width: 2rem;
+  width: 3rem;
   border-radius: 50%;
+}
+
+.detail__socials a:hover svg {
+  background-color: hsl(0, 79%, 57%);
 }
 
 /*
@@ -1428,6 +1450,11 @@ DETAIL - Map
 .detail-map__info .detail__location {
   color: white;
   background-color: black;
+}
+
+.detail-map__info a {
+  text-decoration: underline;
+  color: black;
 }
 
 /*
