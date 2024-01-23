@@ -1,4 +1,4 @@
-(function () {
+(() => {
   const $menu = document.getElementById("menu");
   const $menuBtn = document.getElementById("menu-btn");
   const $filePath = getPath("day");
@@ -150,12 +150,14 @@
     $menuBtn.addEventListener("click", function (e) {
       e.preventDefault();
       $menu.classList.remove("close");
+      document.body.classList.add("overflow-hidden");
       buildUI();
 
       const $close = document.getElementById("close");
       $close.addEventListener("click", function (e) {
         e.preventDefault();
         $menu.classList.add("close");
+        document.body.classList.remove("overflow-hidden");
       });
     });
   }

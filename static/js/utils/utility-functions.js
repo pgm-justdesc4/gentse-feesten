@@ -9,9 +9,6 @@ function getRandomNumber(number) {
   return randomNumber;
 }
 
-// Get number for logos
-const $number = getRandomNumber(6);
-
 /*
 ===================================
 Random Array
@@ -102,18 +99,6 @@ function getParams() {
 function getParam(name) {
   const params = getParams();
   return params.get(name);
-}
-
-/*
-===================================
-Set url search params
-===================================
-*/
-
-function setSearchParams(input, newUrl) {
-  let url = newUrl;
-  url += `${input}`;
-  return (window.location.href = url);
 }
 
 /*

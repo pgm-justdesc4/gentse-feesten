@@ -1,4 +1,4 @@
-(async function () {
+(async () => {
   const $data = await fetchData(API_URL_NEWS);
   const $news = document.getElementById("news");
 

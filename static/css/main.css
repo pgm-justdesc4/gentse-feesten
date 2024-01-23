@@ -29,11 +29,6 @@ body {
   background-color: hsl(31, 49%, 81%);
 }
 
-svg {
-  color: white;
-  width: 2rem;
-}
-
 main {
   overflow: hidden;
 }
@@ -55,16 +50,17 @@ h4 {
   line-height: 100%;
 }
 
-li {
-  list-style: none;
-}
-
 ul {
   padding: 0;
 }
 
-.bg-red {
-  background-color: hsl(0, 79%, 57%);
+li {
+  list-style: none;
+}
+
+svg {
+  color: white;
+  width: 2rem;
 }
 
 .bg-red svg {
@@ -85,6 +81,14 @@ UTILITY CLASSES
 
 .close {
   display: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.bg-red {
+  background-color: hsl(0, 79%, 57%);
 }
 
 .page-pointer::after {
@@ -136,7 +140,6 @@ div.arrow-left svg {
 }
 
 /* Events */
-
 .event {
   position: relative;
   list-style: none;
@@ -250,7 +253,7 @@ header a:hover svg {
   position: relative;
 }
 
-.hover-after:hover::after {
+header .hover-after:hover::after {
   content: "";
   width: 1.5rem;
   border-bottom: 0.2rem solid white;
@@ -308,12 +311,13 @@ MENU
   font-weight: 600;
 }
 
-.menu li {
-  list-style: none;
-}
-
 .menu svg {
   color: black;
+}
+
+.menu a:hover,
+.menu a:hover svg {
+  color: white;
 }
 
 .menu__letter {
@@ -384,11 +388,6 @@ MENU
   }
 }
 
-.menu a:hover,
-.menu a:hover svg {
-  color: white;
-}
-
 /*
 ===================================
 FOOTER
@@ -397,6 +396,12 @@ FOOTER
 
 footer {
   margin-top: 10rem;
+}
+
+@media (max-width: 43.75rem) {
+  footer {
+    margin-top: 5rem;
+  }
 }
 
 /* Subscribe Newsletter */
@@ -644,9 +649,6 @@ DAY NAVIGATOR
     width: 100%;
     height: 100%;
   }
-  .day-nav li p {
-    transform: translateY(25%);
-  }
 }
 
 .day-nav a {
@@ -672,7 +674,8 @@ DAY NAVIGATOR
 
 @media (max-width: 48.75rem) {
   .day-nav .day-pointer {
-    padding: 1.75rem 1rem;
+    padding: 0 1rem;
+    padding-top: 0.8rem;
     background-color: white;
   }
   .day-nav .day-pointer p {
@@ -690,6 +693,110 @@ DAY NAVIGATOR
 
 .day-nav li:hover a {
   color: white;
+}
+
+/*
+===================================
+SEARCH
+===================================
+*/
+
+.search {
+  color: white;
+  background-color: black;
+  padding-bottom: 5rem;
+}
+
+.search .container {
+  max-width: 100rem;
+}
+
+.search img {
+  width: 20rem;
+}
+
+.search h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 36.25rem) {
+  .search h1 {
+    font-size: 2rem;
+  }
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+}
+
+.search-form input {
+  width: 50rem;
+  padding: 1rem;
+  border-top: 0.1rem solid white;
+  border-right: 0;
+  border-bottom: 0.1rem solid white;
+  border-left: 0.1rem solid white;
+  color: white;
+  background-color: black;
+}
+
+@media (max-width: 59.375rem) {
+  .search-form input {
+    width: 30rem;
+  }
+}
+
+@media (max-width: 36.25rem) {
+  .search-form input {
+    width: 16rem;
+  }
+}
+
+.search-form input:focus {
+  outline: 0;
+}
+
+.search-form button {
+  cursor: pointer;
+  background-color: transparent;
+  border-top: 0.1rem solid white;
+  border-right: 0.1rem solid white;
+  border-bottom: 0.1rem solid white;
+  border-left: 0;
+  padding: 0.5rem;
+}
+
+.search-form button:hover {
+  background-color: hsl(0, 79%, 57%);
+}
+
+.search-form button:hover svg {
+  color: black;
+}
+
+.search-info {
+  font-size: 1.75rem;
+  text-align: center;
+  margin: 2.5rem 0;
+}
+
+.searched-events {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.searched-events li {
+  position: relative;
+  list-style: none;
+  margin-bottom: 8rem;
+}
+
+.searched-events img {
+  width: 25rem;
 }
 
 /*
@@ -768,6 +875,12 @@ HOME - Days
   font-size: 2rem;
 }
 
+@media (max-width: 59.5rem) {
+  .home-days__grid strong {
+    font-size: 1.5rem;
+  }
+}
+
 .home-days__grid p {
   padding: 0 3rem;
   padding-top: 0.8rem;
@@ -777,12 +890,6 @@ HOME - Days
   .home-days__grid p {
     padding: 0 1rem;
     padding-top: 0.8rem;
-  }
-}
-
-@media (max-width: 59.5rem) {
-  .home-days__grid strong {
-    font-size: 1.5rem;
   }
 }
 
@@ -872,10 +979,6 @@ HOME - Spotlight
   padding-bottom: 10rem;
 }
 
-.home-spotlight__events li {
-  list-style: none;
-}
-
 .home-spotlight__events a img {
   max-width: 25rem;
 }
@@ -890,11 +993,6 @@ HOME - Spotlight
 HOME - News
 ===================================
 */
-
-.home-news__articles-container {
-  display: flex;
-  flex-direction: column;
-}
 
 .home-news {
   color: white;
@@ -977,6 +1075,11 @@ HOME - News
   }
 }
 
+.home-news__articles-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .home-news__articles article {
   border: 0.1rem solid white;
   padding: 1rem;
@@ -1040,16 +1143,16 @@ HOME - News
   height: 100%;
 }
 
-.home-news__articles-grid article:last-child {
-  grid-column: span 2;
-  height: 100%;
-}
-
 @media (max-width: 33.75rem) {
   .home-news__articles-grid {
     display: flex;
     flex-direction: column;
   }
+}
+
+.home-news__articles-grid article:last-child {
+  grid-column: span 2;
+  height: 100%;
 }
 
 /*
@@ -1068,7 +1171,6 @@ NEWS
 }
 
 .news li {
-  list-style: none;
   margin-bottom: 5rem;
   border: 0.1rem solid white;
 }
@@ -1179,6 +1281,13 @@ NEWS
   transition: 0.4s;
 }
 
+@media (max-width: 73.4375rem) {
+  .news li:hover .arrow-right svg {
+    opacity: 0;
+    transition: 0.4s;
+  }
+}
+
 .news li:hover .arrow-helper {
   width: 7.5rem;
   transition: 0.2s;
@@ -1194,131 +1303,17 @@ NEWS
 
 /*
 ===================================
-SEARCH
-===================================
-*/
-
-.search {
-  color: white;
-  background-color: black;
-  padding-bottom: 5rem;
-}
-
-.search .container {
-  max-width: 100rem;
-}
-
-.search img {
-  width: 20rem;
-}
-
-.search h1 {
-  font-size: 4rem;
-  margin-bottom: 2rem;
-}
-
-@media (max-width: 36.25rem) {
-  .search h1 {
-    font-size: 2rem;
-  }
-}
-
-.search-form {
-  display: flex;
-  justify-content: center;
-}
-
-.search-form input {
-  width: 50rem;
-  padding: 1rem;
-  border-top: 0.1rem solid white;
-  border-right: 0;
-  border-bottom: 0.1rem solid white;
-  border-left: 0.1rem solid white;
-  color: white;
-  background-color: black;
-}
-
-@media (max-width: 59.375rem) {
-  .search-form input {
-    width: 30rem;
-  }
-}
-
-@media (max-width: 36.25rem) {
-  .search-form input {
-    width: 16rem;
-  }
-}
-
-.search-form input:focus {
-  outline: 0;
-}
-
-.search-form button {
-  cursor: pointer;
-  background-color: transparent;
-  border-top: 0.1rem solid white;
-  border-right: 0.1rem solid white;
-  border-bottom: 0.1rem solid white;
-  border-left: 0;
-  padding: 0.5rem;
-}
-
-.search-form button:hover {
-  background-color: hsl(0, 79%, 57%);
-}
-
-.search-form button:hover svg {
-  color: black;
-}
-
-.search-info {
-  font-size: 1.75rem;
-  text-align: center;
-  margin: 2.5rem 0;
-}
-
-.searched-events {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.searched-events li {
-  position: relative;
-  list-style: none;
-  margin-bottom: 8rem;
-}
-
-.searched-events img {
-  width: 25rem;
-}
-
-/*
-===================================
 DAY - Spotlight
 ===================================
 */
 
-.day-spotlight .container {
-  max-width: 90rem;
-}
-
-.day-spotlight img {
-  max-width: 25rem;
-}
-
-@media (max-width: 25.625rem) {
-  .day-spotlight img {
-    max-width: 20rem;
-  }
-}
-
 .day-spotlight {
   padding-bottom: 10rem;
   background-color: black;
+}
+
+.day-spotlight .container {
+  max-width: 90rem;
 }
 
 .day-spotlight ul {
@@ -1333,14 +1328,24 @@ DAY - Spotlight
   padding-bottom: 5rem;
 }
 
+.day-spotlight a {
+  position: relative;
+}
+
+.day-spotlight img {
+  max-width: 25rem;
+}
+
 @media (max-width: 25.625rem) {
-  .day-spotlight .event {
+  .day-spotlight img {
     max-width: 20rem;
   }
 }
 
-.day-spotlight a {
-  position: relative;
+@media (max-width: 25.625rem) {
+  .day-spotlight .event {
+    max-width: 20rem;
+  }
 }
 
 /*
@@ -1376,12 +1381,6 @@ DAY - Filter
   border: 0.1rem solid hsl(31, 49%, 81%);
 }
 
-.day-filter__menu ul {
-  display: flex;
-  align-items: center;
-  padding: 0;
-}
-
 @media (max-width: 43.4375rem) {
   .day-filter__menu {
     max-height: 7rem;
@@ -1390,6 +1389,12 @@ DAY - Filter
   .day-filter__options {
     border-top: 0.1rem solid hsl(31, 49%, 81%);
   }
+}
+
+.day-filter__menu ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
 }
 
 .day-filter__menu li {
@@ -1437,7 +1442,6 @@ DAY - Filter
 }
 
 .filter-categories li {
-  list-style: none;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -1527,7 +1531,6 @@ DAY - Events
 
 .day-events li {
   position: relative;
-  list-style: none;
   margin-bottom: 10rem;
 }
 

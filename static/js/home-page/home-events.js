@@ -1,4 +1,4 @@
-(async function () {
+(async () => {
   const $data = await fetchData(API_URL_EVENTS);
   const $spotlight = document.getElementById("spotlight");
   const $eventsFiltered = $data.filter(

@@ -1,10 +1,9 @@
-(async function () {
-  const $data = await fetchData(API_URL_EVENTS);
-
+(async () => {
   const $searchInfo = document.getElementById("searchInfo");
   const $events = document.getElementById("searchedEvents");
   const $searchInput = document.querySelector("input");
 
+  const $data = await fetchData(API_URL_EVENTS);
   const $eventsFiltered = $data.filter(
     (event) => event.image && event.location && event.description
   );

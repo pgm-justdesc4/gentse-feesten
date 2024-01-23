@@ -1,4 +1,4 @@
-(async function () {
+(async () => {
   const $data = await fetchData(API_URL_NEWS);
   const $newsList = document.getElementById("news");
   const $news = getRandomArray(3, $data);

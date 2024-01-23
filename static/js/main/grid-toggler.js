@@ -1,4 +1,4 @@
-(function () {
+(() => {
   const $normal = document.getElementById("normal");
   const $list = document.getElementById("list");
   const $events = document.getElementById("events");
