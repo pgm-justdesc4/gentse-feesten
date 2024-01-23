@@ -52,7 +52,7 @@ h1,
 h2,
 h3,
 h4 {
-  line-height: 90%;
+  line-height: 100%;
 }
 
 li {
@@ -1449,6 +1449,12 @@ DAY - Filter
   width: 3rem;
 }
 
+@media (max-width: 27.1875rem) {
+  .filter-categories figure {
+    display: none;
+  }
+}
+
 .filter-categories a {
   text-decoration: none;
   color: black;
@@ -1457,7 +1463,7 @@ DAY - Filter
 
 @media (max-width: 27.1875rem) {
   .filter-categories a {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -1849,7 +1855,7 @@ GRID TOGGLER
 }
 
 .grid-toggler .list-btn {
-  padding: 0.8rem 0.5rem;
+  padding: 0.75rem 0.5rem;
 }
 
 .grid-toggler a:hover,
@@ -1860,6 +1866,10 @@ GRID TOGGLER
 .grid-toggler a:hover svg,
 .grid-toggler a:active svg {
   color: black;
+}
+
+.grid-toggler svg {
+  width: 1.75rem;
 }
 
 /* Events */
@@ -1889,6 +1899,15 @@ GRID TOGGLER
   max-width: 100%;
   margin: 0;
   padding: 1rem;
+}
+
+@media (max-width: 36.875rem) {
+  .grid-list .event-text-bl {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 }
 
 .grid-list .event-text-bl h2 {
@@ -1925,8 +1944,23 @@ GRID TOGGLER
   border-right: 0.1rem solid black;
 }
 
+@media (max-width: 36.875rem) {
+  .grid-list .grid-list__border,
+  .grid-list .event:hover .grid-list__border {
+    border: 0;
+  }
+}
+
 .grid-list .event:hover .grid-list__border h2,
 .grid-list .event:hover h3,
 .grid-list .event:hover .flex-order {
   color: black;
+}
+
+@media (max-width: 25.3125rem) {
+  .grid-list .event-text-bl h2,
+  .grid-list .event-text-bl h3,
+  .grid-list .event-text-bl p {
+    font-size: 0.9rem;
+  }
 }
