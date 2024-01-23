@@ -583,11 +583,36 @@ DAY NAVIGATOR
   padding: 5rem 0;
 }
 
+@media (max-width: 48.75rem) {
+  .day-nav ul {
+    display: grid;
+    gap: 0.1rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
 .day-nav li {
   cursor: pointer;
   list-style: none;
   background-color: hsl(0, 79%, 57%);
   padding: 1rem 2rem;
+}
+
+@media (max-width: 64.6875rem) {
+  .day-nav li {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 48.75rem) {
+  .day-nav li {
+    width: 100%;
+    height: 100%;
+  }
+  .day-nav li p {
+    transform: translateY(48%);
+  }
 }
 
 .day-nav a {
@@ -601,9 +626,24 @@ DAY NAVIGATOR
   font-size: 2rem;
 }
 
+@media (max-width: 31.25rem) {
+  .day-nav a strong {
+    font-size: 1rem;
+  }
+}
+
 .day-nav .day-pointer {
-  font-size: 2rem;
   padding: 2.5rem 2rem;
+}
+
+@media (max-width: 48.75rem) {
+  .day-nav .day-pointer {
+    padding: 2.5rem 1rem;
+    background-color: white;
+  }
+  .day-nav .day-pointer p {
+    transform: translateY(0);
+  }
 }
 
 .day-nav li:hover {
@@ -1143,6 +1183,12 @@ SEARCH
   margin-bottom: 2rem;
 }
 
+@media (max-width: 36.25rem) {
+  .search h1 {
+    font-size: 2rem;
+  }
+}
+
 .search-form {
   display: flex;
   justify-content: center;
@@ -1157,6 +1203,18 @@ SEARCH
   border-left: 0.1rem solid white;
   color: white;
   background-color: black;
+}
+
+@media (max-width: 59.375rem) {
+  .search-form input {
+    width: 30rem;
+  }
+}
+
+@media (max-width: 36.25rem) {
+  .search-form input {
+    width: 16rem;
+  }
 }
 
 .search-form input:focus {
@@ -1210,8 +1268,18 @@ DAY - Spotlight
 ===================================
 */
 
+.day-spotlight .container {
+  max-width: 90rem;
+}
+
 .day-spotlight img {
   max-width: 25rem;
+}
+
+@media (max-width: 25.625rem) {
+  .day-spotlight img {
+    max-width: 20rem;
+  }
 }
 
 .day-spotlight {
@@ -1222,11 +1290,19 @@ DAY - Spotlight
 .day-spotlight ul {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 5rem;
 }
 
 .day-spotlight li {
   list-style: none;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 25.625rem) {
+  .day-spotlight .event {
+    max-width: 20rem;
+  }
 }
 
 .day-spotlight a {
@@ -1243,6 +1319,7 @@ DAY - Filter
   color: white;
   background-color: black;
   padding: 3rem 0;
+  padding-top: 0;
 }
 
 .day-filter svg {
@@ -1268,6 +1345,16 @@ DAY - Filter
   display: flex;
   align-items: center;
   padding: 0;
+}
+
+@media (max-width: 43.4375rem) {
+  .day-filter__menu {
+    max-height: 7rem;
+    flex-direction: column-reverse;
+  }
+  .day-filter__options {
+    border-top: 0.1rem solid hsl(31, 49%, 81%);
+  }
 }
 
 .day-filter__menu li {
@@ -1378,6 +1465,7 @@ DAY - Events
 
 .day-events ul {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 5rem;
   padding-bottom: 7rem;
@@ -1415,6 +1503,19 @@ DAY - Search
   gap: 5rem;
 }
 
+@media (max-width: 78.75rem) {
+  .day-search .container {
+    flex-direction: column;
+  }
+  .day-search figure {
+    width: 100%;
+  }
+  .day-search img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
 .day-search h2 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
@@ -1429,6 +1530,19 @@ DAY - Search
   width: 35rem;
   color: black;
   background-color: white;
+}
+
+@media (max-width: 78.75rem) {
+  .day-search__form input,
+  .day-search__form button {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 43.125rem) {
+  .day-search__form input {
+    width: 15rem;
+  }
 }
 
 .day-search__form button {
@@ -1631,6 +1745,7 @@ GRID TOGGLER
   justify-content: flex-end;
   align-items: center;
   gap: 0.5rem;
+  margin-bottom: 3rem;
 }
 
 .grid-toggler a {
