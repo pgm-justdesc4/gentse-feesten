@@ -10,7 +10,7 @@
     <div class="menu">
     <div class="menu__search">
         <ul>
-            <li class="header__languages">
+            <li class="header__languages header-hidden__delay">
                 <a href="#">NL
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                         <path fill="currentColor"
@@ -18,7 +18,7 @@
                     </svg>
                 </a>
             </li>
-            <li class="header__search">
+            <li class="header__search header-hidden__delay">
                 <a href="${$filePath}search.html">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                         <path fill="currentColor"
