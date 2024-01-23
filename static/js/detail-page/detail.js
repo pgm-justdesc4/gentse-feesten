@@ -1,4 +1,4 @@
-(async function () {
+(async () => {
   const $dayNav = document.getElementById("dayNav");
   const $detail = document.getElementById("detail");
   const $map = document.getElementById("locationMap");
@@ -8,10 +8,9 @@
   const $day = getParam("day");
   const $slug = getParam("slug");
 
-  const eventInArray = $data.filter(
+  const $event = $data.find(
     (event) => event.day === $day && event.slug === $slug
   );
-  const $event = eventInArray[0];
 
   // RENDER HTML
 

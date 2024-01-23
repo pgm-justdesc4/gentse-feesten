@@ -42,6 +42,12 @@ h1 {
   font-size: 3.5rem;
 }
 
+@media (max-width: 31.25rem) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -55,6 +61,14 @@ li {
 
 ul {
   padding: 0;
+}
+
+.bg-red {
+  background-color: hsl(0, 79%, 57%);
+}
+
+.bg-red svg {
+  color: black;
 }
 
 /*
@@ -75,12 +89,12 @@ UTILITY CLASSES
 
 .page-pointer::after {
   content: "";
-  width: 2.5rem;
-  height: 1rem;
+  width: 2rem;
+  height: 1.25rem;
   border-left: 0.2rem solid white;
   border-top: 0.2rem solid white;
   position: absolute;
-  bottom: -1rem;
+  bottom: -1.5rem;
   left: 0;
 }
 
@@ -105,14 +119,14 @@ UTILITY CLASSES
 
 div.arrow-right svg {
   width: 3rem;
-  margin-left: -1.75rem;
+  transform: translateX(-54%);
   color: black;
 }
 
 div.arrow-left svg {
   color: black;
   width: 3rem;
-  margin-right: -1.75rem;
+  transform: translateX(51%);
 }
 
 .arrow-helper {
@@ -141,6 +155,7 @@ div.arrow-left svg {
 
 .event-text-bl h2 {
   font-size: 1.25rem;
+  margin-bottom: 0.75rem;
 }
 
 .event-text-bl h2,
@@ -333,6 +348,12 @@ MENU
   padding: 1rem 5rem;
 }
 
+@media (max-width: 28.4375rem) {
+  .menu__nav {
+    padding: 1rem 2rem;
+  }
+}
+
 .menu__nav-list {
   margin-top: 5rem;
   display: flex;
@@ -355,6 +376,12 @@ MENU
   top: 2.35rem;
   right: 2rem;
   font-size: 2.5rem;
+}
+
+@media (max-width: 28.4375rem) {
+  .menu__close {
+    right: 0.75rem;
+  }
 }
 
 .menu a:hover,
@@ -618,7 +645,7 @@ DAY NAVIGATOR
     height: 100%;
   }
   .day-nav li p {
-    transform: translateY(48%);
+    transform: translateY(25%);
   }
 }
 
@@ -640,12 +667,12 @@ DAY NAVIGATOR
 }
 
 .day-nav .day-pointer {
-  padding: 2.5rem 2rem;
+  padding: 2.5rem 2.5rem;
 }
 
 @media (max-width: 48.75rem) {
   .day-nav .day-pointer {
-    padding: 2.5rem 1rem;
+    padding: 1.75rem 1rem;
     background-color: white;
   }
   .day-nav .day-pointer p {
@@ -1340,6 +1367,7 @@ DAY - Filter
 
 .day-filter h2 {
   font-size: 2.75rem;
+  margin-bottom: 1.25rem;
 }
 
 .day-filter__menu {
@@ -1427,6 +1455,12 @@ DAY - Filter
   font-size: 1.35rem;
 }
 
+@media (max-width: 27.1875rem) {
+  .filter-categories a {
+    font-size: 1rem;
+  }
+}
+
 .filter-categories a:hover {
   text-decoration: underline;
 }
@@ -1437,6 +1471,13 @@ DAY - Filter
 
 .day-filter .search-form input {
   width: 25rem;
+}
+
+@media (max-width: 30rem) {
+  .day-filter .search-form input {
+    width: 15rem;
+    padding: 1rem 0;
+  }
 }
 
 /*
@@ -1627,7 +1668,7 @@ DETAIL
 
 .detail .arrow-left svg {
   color: white;
-  transform: translateX(0.75rem);
+  transform: translateX(77%);
 }
 
 .detail .arrow-helper {
@@ -1643,6 +1684,7 @@ DETAIL
 @media (max-width: 70rem) {
   .detail__event {
     flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -1658,7 +1700,7 @@ DETAIL
 
 @media (max-width: 26.5625rem) {
   .detail__event img {
-    max-width: 15rem;
+    max-width: 18rem;
   }
 }
 
@@ -1683,7 +1725,7 @@ DETAIL
 @media (max-width: 70rem) {
   .detail__event-info li {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.25rem;
   }
 }
 
@@ -1702,6 +1744,7 @@ DETAIL
     flex-direction: column;
     align-items: flex-start;
     gap: 0.25rem;
+    margin-bottom: 1.25rem;
   }
 }
 
@@ -1715,7 +1758,8 @@ DETAIL
 }
 
 .detail__location p {
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
 }
 
 .detail__location img {
@@ -1770,8 +1814,13 @@ DETAIL - Map
   background-color: hsl(0, 79%, 57%);
 }
 
+@media (max-width: 69.375rem) {
+  .detail-map__info {
+    padding-right: 2rem;
+  }
+}
+
 .detail-map__info .detail__location {
-  display: inline-block;
   color: white;
   background-color: black;
 }
@@ -1797,6 +1846,10 @@ GRID TOGGLER
 
 .grid-toggler a {
   padding: 0.5rem;
+}
+
+.grid-toggler .list-btn {
+  padding: 0.8rem 0.5rem;
 }
 
 .grid-toggler a:hover,

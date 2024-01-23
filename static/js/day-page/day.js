@@ -1,4 +1,4 @@
-(async function () {
+(async () => {
   const $dayNav = document.getElementById("dayNav");
   const $spotlight = document.getElementById("spotlight");
   const $filter = document.getElementById("filter");

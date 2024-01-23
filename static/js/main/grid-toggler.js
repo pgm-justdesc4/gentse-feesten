@@ -11,8 +11,12 @@
       e.preventDefault();
       if ($events) {
         $events.classList.remove("grid-list");
+        $normal.classList.add("bg-red");
+        $list.classList.remove("bg-red");
       } else if ($eventSearch) {
         $eventSearch.classList.remove("grid-list");
+        $normal.classList.add("bg-red");
+        $list.classList.remove("bg-red");
       }
     });
 
@@ -20,8 +24,12 @@
       e.preventDefault();
       if ($events) {
         $events.classList.add("grid-list");
+        $list.classList.add("bg-red");
+        $normal.classList.remove("bg-red");
       } else if ($eventSearch) {
         $eventSearch.classList.add("grid-list");
+        $list.classList.add("bg-red");
+        $normal.classList.remove("bg-red");
       }
     });
   }

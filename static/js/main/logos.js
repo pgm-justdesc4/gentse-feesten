@@ -1,4 +1,4 @@
-(function () {
+(() => {
   const $logo = document.getElementById("logo");
   const $letter = document.getElementById("logo-letter");
   const $logoFooter = document.getElementById("logo-footer");
