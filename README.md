@@ -4,7 +4,7 @@
 In this project, I developed a recreation of the Gentse Feesten website, guided by the original design. Using HTML, CSS, and JavaScript, I replicated various pages, including Home, Day Detail, Event Detail, News, and Search pages. I integrated visual elements with local resources such as logos, icons, and images. Additionally, I loaded data via APIs for events, categories, and news.
 
 ## About the Application
-The recreated Gentse Feesten website is designed to be fully responsive, ensuring a consistent experience for visitors across different devices. Using Artevelde's Reset.css, I maintained a uniform style and accounted for accessibility settings for font sizes. The website features dynamic content, allowing for interactive elements, event filtering by categories and locations, and optimized search functionality.
+The recreated Gentse Feesten website is designed to be fully responsive, ensuring a consistent experience for visitors across different devices. The website features dynamic content, allowing for interactive elements, event filtering by categories and locations, and optimized search functionality.
 
 ### Features
 - **Page Replication**: Replicated Home, Day Detail, Event Detail, News, and Search pages from the original Gentse Feesten website.
@@ -22,7 +22,7 @@ The recreated Gentse Feesten website is designed to be fully responsive, ensurin
 
 ## Tech Stack
 - HTML
-- CSS (with Artevelde's Reset.css)
+- CSS
 - JavaScript
 
 ## Project Links
